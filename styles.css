@@ -1552,3 +1552,32 @@ section[id]:not(#accueil) {
         transform: translateX(-50%) translateY(0) !important;
     }
 }
+
+/* Centrage propre du bouton du hero sur mobile uniquement */
+@media (max-width: 850px) {
+
+    .hero-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .hero-content .hero-button {
+        position: static !important;
+        left: auto !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        transform: none !important;
+        align-self: center !important;
+    }
+
+    .hero-content .hero-button:hover {
+        transform: translateY(-2px) !important;
+    }
+
+    .hero-content .hero-button:active {
+        transform: translateY(0) !important;
+    }
+}
