@@ -743,7 +743,7 @@ section[id]:not(#accueil) {
 /* Ajustement vertical section À propos */
 .about-section {
     padding-top: 65px !important;
-    padding-bottom: 120px !important;
+    
 }
 
 @media (max-width: 850px) {
@@ -1608,37 +1608,775 @@ section[id]:not(#accueil) {
 
 }
 
-/* HERO - supprimer l'indication de scroll */
-.scroll-indicator,
-.scroll-hint,
-.hero-scroll,
-.scroll-line {
-    display: none !important;
+/* À PROPOS - paragraphes justifiés sur desktop uniquement */
+@media (min-width: 851px) {
+    #apropos .about-content p {
+        text-align: justify !important;
+        text-align-last: left !important;
+    }
 }
 
-/* HERO - suppression du texte et du trait de scroll */
-.hero-scroll,
-.hero-scroll-text,
-.scroll-indicator,
-.scroll-hint,
-.scroll-line,
-.scroll-text {
-    display: none !important;
+/* ==========================================================
+   RÈGLE GÉNÉRALE DES PETITS PARAGRAPHES - DESKTOP
+========================================================== */
+
+@media (min-width: 851px) {
+
+    main section p {
+        text-align: justify;
+        text-align-last: left;
+    }
+
 }
 
-.hero::after,
-.hero::before {
-    /* ne rien masquer globalement ici */
+/* HERO - ne pas justifier le slogan */
+@media (min-width: 851px) {
+    .hero-content p,
+    .hero-subtitle,
+    .hero-tagline {
+        text-align: center !important;
+        text-align-last: center !important;
+    }
 }
 
-/* HERO - supprimer complètement l'indication de scroll */
-.hero .scroll {
-    display: none !important;
-}
-
-/* À PROPOS - centrer uniquement le bouton */
-#apropos .about-button {
+/* À PROPOS - centrer le bouton */
+#apropos .about-content .site-button,
+#apropos .about-content .about-button {
     display: flex !important;
     margin-left: auto !important;
     margin-right: auto !important;
+    align-self: center !important;
+}
+
+/* À PROPOS - remonter légèrement le bloc texte sur desktop */
+@media (min-width: 851px) {
+
+    #apropos .about-content h2,
+    #apropos .about-content p {
+        transform: translateY(-10px) !important;
+    }
+
+}
+
+/* À PROPOS - ornement sobre sous le bouton (desktop uniquement) */
+@media (min-width: 851px) {
+
+    #apropos .about-content {
+        position: relative !important;
+        
+    }
+
+    #apropos .about-content::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 42px;
+
+        width: 120px;
+        height: 1px;
+
+        background: linear-gradient(
+            to right,
+            transparent 0%,
+            rgba(187,139,117,.55) 18%,
+            rgba(187,139,117,.55) 82%,
+            transparent 100%
+        );
+
+        transform: translateX(-50%);
+    }
+
+    #apropos .about-content::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 38px;
+
+        width: 8px;
+        height: 8px;
+
+        background: rgba(187,139,117,.75);
+
+        transform: translateX(-50%) rotate(45deg);
+        border-radius: 1px;
+    }
+
+}
+
+/* À PROPOS - arabesque luxe discrète, sans déplacer le bloc */
+@media (min-width: 851px) {
+
+    #apropos .about-content {
+        position: relative !important;
+    }
+
+    #apropos .about-content::before {
+        content: "❦";
+        position: absolute;
+
+        left: 50%;
+        bottom: 26px;
+
+        transform: translateX(-50%);
+
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 22px;
+        line-height: 1;
+
+        color: rgba(187,139,117,.68);
+
+        pointer-events: none;
+    }
+
+    #apropos .about-content::after {
+        content: "";
+        position: absolute;
+
+        left: 50%;
+        bottom: 35px;
+
+        width: 150px;
+        height: 1px;
+
+        transform: translateX(-50%);
+
+        background:
+            linear-gradient(
+                to right,
+                transparent 0%,
+                rgba(187,139,117,.38) 28%,
+                transparent 44%,
+                transparent 56%,
+                rgba(187,139,117,.38) 72%,
+                transparent 100%
+            );
+
+        pointer-events: none;
+    }
+
+}
+
+/* À PROPOS - ornement sobre sous le bouton */
+@media (min-width: 851px) {
+
+    #apropos .about-content::before {
+        content: "";
+        position: absolute;
+
+        left: 50%;
+        bottom: 28px;
+
+        width: 150px;
+        height: 1px;
+
+        transform: translateX(-50%);
+
+        background:
+            linear-gradient(
+                to right,
+                rgba(187,139,117,0) 0%,
+                rgba(187,139,117,.48) 18%,
+                rgba(187,139,117,.48) 42%,
+                rgba(187,139,117,0) 42%,
+                rgba(187,139,117,0) 58%,
+                rgba(187,139,117,.48) 58%,
+                rgba(187,139,117,.48) 82%,
+                rgba(187,139,117,0) 100%
+            );
+
+        pointer-events: none;
+    }
+
+    #apropos .about-content::after {
+        content: "";
+        position: absolute;
+
+        left: 50%;
+        bottom: 24px;
+
+        width: 8px;
+        height: 8px;
+
+        background: rgba(187,139,117,.72);
+
+        transform: translateX(-50%) rotate(45deg);
+
+        pointer-events: none;
+    }
+
+}
+
+/* À PROPOS - repositionnement propre de l'ornement */
+@media (min-width: 851px) {
+
+    #apropos .about-content {
+        position: relative !important;
+    }
+
+    #apropos .about-content::before {
+        content: "";
+        position: absolute;
+
+        left: 50%;
+        top: calc(100% - 72px);
+
+        width: 150px;
+        height: 1px;
+
+        transform: translateX(-50%);
+
+        background:
+            linear-gradient(
+                to right,
+                rgba(187,139,117,0) 0%,
+                rgba(187,139,117,.48) 18%,
+                rgba(187,139,117,.48) 42%,
+                rgba(187,139,117,0) 42%,
+                rgba(187,139,117,0) 58%,
+                rgba(187,139,117,.48) 58%,
+                rgba(187,139,117,.48) 82%,
+                rgba(187,139,117,0) 100%
+            );
+
+        pointer-events: none;
+    }
+
+    #apropos .about-content::after {
+        content: "";
+        position: absolute;
+
+        left: 50%;
+        top: calc(100% - 76px);
+
+        width: 8px;
+        height: 8px;
+
+        background: rgba(187,139,117,.72);
+
+        transform: translateX(-50%) rotate(45deg);
+
+        pointer-events: none;
+    }
+
+}
+
+/* ==========================================================
+   ORNEMENT DE RÉFÉRENCE AD BEAUTY ARTIST
+   Deux lignes fines + losange central
+========================================================== */
+
+@media (min-width: 851px) {
+
+    #apropos .about-content {
+        position: relative !important;
+    }
+
+    #apropos .about-content::before {
+        content: "";
+        position: absolute;
+
+        left: 50%;
+        bottom: 58px;
+
+        width: 372px;
+        height: 1px;
+
+        transform: translateX(-50%);
+
+        background:
+            linear-gradient(
+                to right,
+                rgba(187,139,117,.58) 0%,
+                rgba(187,139,117,.58) 45%,
+                transparent 45%,
+                transparent 55%,
+                rgba(187,139,117,.58) 55%,
+                rgba(187,139,117,.58) 100%
+            );
+
+        pointer-events: none;
+    }
+
+    #apropos .about-content::after {
+        content: "";
+        position: absolute;
+
+        left: 50%;
+        bottom: 54px;
+
+        width: 9px;
+        height: 9px;
+
+        background: rgba(187,139,117,.78);
+
+        transform:
+            translateX(-50%)
+            rotate(45deg);
+
+        pointer-events: none;
+    }
+
+}
+
+/* ==========================================================
+   À PROPOS - ORNEMENT DE RÉFÉRENCE SOUS LE BOUTON
+   Centré verticalement entre le bas du bouton et le bas
+   de la colonne / image - DESKTOP UNIQUEMENT
+========================================================== */
+
+@media (min-width: 851px) {
+
+    #apropos .about-content {
+        position: relative !important;
+    }
+
+    /* On neutralise les anciens essais d'ornement */
+    #apropos .about-content::before,
+    #apropos .about-content::after {
+        content: none !important;
+    }
+
+    #apropos .about-ornament-ref {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 372px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    #apropos .about-ornament-ref .line {
+        flex: 1 1 auto;
+        height: 1px;
+        background: rgba(187, 139, 117, .58);
+    }
+
+    #apropos .about-ornament-ref .diamond {
+        flex: 0 0 9px;
+        width: 9px;
+        height: 9px;
+        background: rgba(187, 139, 117, .78);
+        transform: rotate(45deg);
+    }
+
+}
+
+@media (max-width: 850px) {
+    #apropos .about-ornament-ref {
+        display: none !important;
+    }
+}
+
+
+
+@media (max-width: 850px) {
+    #apropos .about-ornament-ref {
+        display: none !important;
+    }
+}
+
+/* ==========================================================
+   À PROPOS - POSITIONNEMENT FINAL DE L'ORNEMENT
+   Référence : bouton -> bas de la section
+========================================================== */
+
+@media (min-width: 851px) {
+
+    #apropos {
+        position: relative !important;
+    }
+
+    #apropos > .about-ornament-ref {
+        position: absolute !important;
+
+        left: 50% !important;
+
+        width: 372px !important;
+        margin: 0 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 18px !important;
+
+        transform: translate(-50%, -50%) !important;
+
+        pointer-events: none !important;
+        z-index: 5 !important;
+    }
+
+    #apropos > .about-ornament-ref .line {
+        flex: 1 1 auto !important;
+        height: 1px !important;
+        background: rgba(187,139,117,.58) !important;
+    }
+
+    #apropos > .about-ornament-ref .diamond {
+        width: 9px !important;
+        height: 9px !important;
+        flex: 0 0 9px !important;
+
+        background: rgba(187,139,117,.78) !important;
+
+        transform: rotate(45deg) !important;
+    }
+
+}
+
+/* ==========================================================
+   ORNEMENT À PROPOS - RÈGLE DÉFINITIVE DESKTOP
+========================================================== */
+
+@media (min-width: 851px) {
+
+    #apropos {
+        position: relative !important;
+    }
+
+    /* Neutralise les anciens ornements pseudo-éléments */
+    #apropos .about-content::before,
+    #apropos .about-content::after {
+        content: none !important;
+        display: none !important;
+    }
+
+    #apropos > .about-ornament-ref {
+        position: absolute !important;
+
+        left: 50% !important;
+
+        width: 372px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 18px !important;
+
+        transform:
+            translate(-50%, -50%) !important;
+
+        pointer-events: none !important;
+
+        z-index: 2 !important;
+    }
+
+    #apropos > .about-ornament-ref .line {
+        flex: 1 1 auto !important;
+
+        height: 1px !important;
+
+        background:
+            rgba(187,139,117,.58) !important;
+    }
+
+    #apropos > .about-ornament-ref .diamond {
+        width: 9px !important;
+        height: 9px !important;
+
+        flex: 0 0 9px !important;
+
+        background:
+            rgba(187,139,117,.78) !important;
+
+        transform:
+            rotate(45deg) !important;
+    }
+
+}
+
+@media (max-width: 850px) {
+
+    #apropos .about-ornament-ref {
+        display: none !important;
+    }
+
+}
+
+/* ==========================================================
+   ABOUT ORNAMENT FINAL
+========================================================== */
+
+@media (min-width: 851px) {
+
+    #apropos .about-container {
+        position: relative !important;
+    }
+
+    #apropos .about-ornament-ref {
+        position: absolute !important;
+
+        width: 372px !important;
+        height: 12px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 18px !important;
+
+        transform: translate(-50%, -50%) !important;
+
+        pointer-events: none !important;
+        z-index: 3 !important;
+    }
+
+    #apropos .about-ornament-ref .line {
+        flex: 1 1 auto !important;
+
+        height: 1px !important;
+
+        background: rgba(187,139,117,.58) !important;
+    }
+
+    #apropos .about-ornament-ref .diamond {
+        width: 9px !important;
+        height: 9px !important;
+        flex: 0 0 9px !important;
+
+        background: rgba(187,139,117,.78) !important;
+
+        transform: rotate(45deg) !important;
+    }
+
+}
+
+@media (max-width: 850px) {
+
+    #apropos .about-ornament-ref {
+        display: none !important;
+    }
+
+}
+
+/* ==========================================================
+   À PROPOS - ORNEMENT SOUS LE BOUTON
+   VERSION SANS JAVASCRIPT
+========================================================== */
+
+@media (min-width: 851px) {
+
+    #apropos .about-content {
+        position: relative !important;
+    }
+
+    #apropos .about-ornament-ref {
+        position: absolute !important;
+
+        left: 50% !important;
+        bottom: 78px !important;
+
+        width: 372px !important;
+        height: 12px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 18px !important;
+
+        transform: translateX(-50%) !important;
+
+        pointer-events: none !important;
+        z-index: 2 !important;
+    }
+
+    #apropos .about-ornament-ref .line {
+        flex: 1 1 auto !important;
+        height: 1px !important;
+
+        background: rgba(187,139,117,.58) !important;
+    }
+
+    #apropos .about-ornament-ref .diamond {
+        width: 9px !important;
+        height: 9px !important;
+        flex: 0 0 9px !important;
+
+        background: rgba(187,139,117,.78) !important;
+
+        transform: rotate(45deg) !important;
+    }
+
+}
+
+@media (max-width: 850px) {
+    #apropos .about-ornament-ref {
+        display: none !important;
+    }
+}
+
+/* ORNEMENT À PROPOS - position corrigée */
+@media (min-width: 851px) {
+
+    #apropos .about-content {
+        position: relative !important;
+    }
+
+    #apropos .about-content .about-ornament-ref {
+        position: absolute !important;
+
+        left: 50% !important;
+        bottom: 78px !important;
+
+        width: 372px !important;
+        height: 12px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 18px !important;
+
+        transform: translateX(-50%) !important;
+
+        pointer-events: none !important;
+    }
+
+}
+
+@media (min-width: 851px) {
+
+    #apropos .about-content .about-ornament-ref {
+        position: absolute !important;
+
+        left: 50% !important;
+
+        top: auto;
+        bottom: auto !important;
+
+        width: 372px !important;
+
+        margin: 0 !important;
+
+        transform: translate(-50%, -50%) !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 18px !important;
+    }
+
+}
+
+@media (min-width: 851px) {
+
+    #apropos .about-content .about-ornament-ref {
+        position: absolute !important;
+
+        left: 50% !important;
+        top: var(--about-ornament-top) !important;
+        bottom: auto !important;
+
+        transform: translate(-50%, -50%) !important;
+
+        width: 372px !important;
+        margin: 0 !important;
+    }
+
+}
+
+/* ==========================================================
+   À PROPOS - CORRECTION STRUCTURE ORNEMENT
+   Desktop uniquement
+========================================================== */
+
+@media (min-width: 851px) {
+
+    /* La colonne droite prend la même hauteur que la colonne image */
+    #apropos .about-content {
+        align-self: stretch !important;
+        position: relative !important;
+    }
+
+    /* Ornement sous le bouton, dans l'espace libre */
+    #apropos .about-content .about-ornament-ref {
+        position: absolute !important;
+
+        left: 50% !important;
+        top: 72% !important;
+
+        width: 372px !important;
+
+        margin: 0 !important;
+
+        transform: translate(-50%, -50%) !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 18px !important;
+    }
+
+    #apropos .about-content .about-ornament-ref .line {
+        flex: 1 1 auto !important;
+        height: 1px !important;
+
+        background: rgba(187,139,117,.58) !important;
+    }
+
+    #apropos .about-content .about-ornament-ref .diamond {
+        width: 9px !important;
+        height: 9px !important;
+        flex: 0 0 9px !important;
+
+        background: rgba(187,139,117,.78) !important;
+
+        transform: rotate(45deg) !important;
+    }
+
+}
+
+/* ==========================================================
+   À PROPOS - ORNEMENT POSITIONNÉ SUR LE CONTENEUR COMPLET
+   Desktop uniquement
+========================================================== */
+
+@media (min-width: 851px) {
+
+    #apropos .about-container {
+        position: relative !important;
+    }
+
+    #apropos .about-content .about-ornament-ref {
+        position: absolute !important;
+
+        /* Centre de la colonne droite */
+        left: 75% !important;
+
+        /* Milieu visuel entre bouton et bas de l'image */
+        top: 73% !important;
+
+        width: 372px !important;
+        height: 12px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        transform: translate(-50%, -50%) !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 18px !important;
+
+        pointer-events: none !important;
+    }
+
 }
