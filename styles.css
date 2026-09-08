@@ -1581,3 +1581,29 @@ section[id]:not(#accueil) {
         transform: translateY(0) !important;
     }
 }
+
+/* ==========================================================
+   MOBILE - À PROPOS UNIQUEMENT
+   Ne touche pas à l'en-tête
+========================================================== */
+
+@media (max-width: 850px) {
+
+    #apropos .about-content h2 {
+        text-align: center !important;
+    }
+
+    #apropos .about-content p {
+        text-align: justify !important;
+        text-align-last: left !important;
+    }
+
+    #apropos .about-content .about-button,
+    #apropos .about-content .site-button {
+        display: flex !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        align-self: center !important;
+    }
+
+}
