@@ -837,3 +837,681 @@ section[id]:not(#accueil) {
         transform: none;
     }
 }
+
+/* ==========================================================
+   SECTION 3 - MON SAVOIR-FAIRE
+========================================================== */
+
+.skills-section {
+    padding: 105px 0 115px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f7efe8 0%,
+            #fbf7f1 100%
+        );
+}
+
+.skills-container {
+    width: min(1180px, calc(100% - 80px));
+    margin: 0 auto;
+}
+
+.skills-heading {
+    max-width: 850px;
+    margin: 0 auto 58px;
+
+    text-align: center;
+}
+
+.skills-eyebrow {
+    display: block;
+
+    margin-bottom: 14px;
+
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: var(--rose);
+}
+
+.skills-divider {
+    width: 120px;
+
+    margin: 0 auto 26px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skills-divider span {
+    flex: 1;
+    height: 1px;
+
+    background: rgba(187,139,117,.55);
+}
+
+.skills-divider i {
+    width: 7px;
+    height: 7px;
+
+    background: var(--rose);
+
+    transform: rotate(45deg);
+}
+
+.skills-heading h2 {
+    margin: 0;
+
+    font-family: var(--serif);
+    font-size: clamp(48px, 5vw, 70px);
+    font-weight: 400;
+    line-height: .98;
+
+    color: #6f493b;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+.skill-card {
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.42);
+
+    border: 1px solid rgba(200,170,134,.18);
+
+    box-shadow:
+        0 18px 42px rgba(95,65,52,.09);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 24px 52px rgba(95,65,52,.14);
+}
+
+.skill-card img {
+    width: 100%;
+    height: 360px;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.skill-content {
+    padding: 24px 26px 30px;
+}
+
+.skill-content > span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: var(--serif);
+    font-size: 15px;
+
+    color: var(--rose);
+}
+
+.skill-content h3 {
+    margin: 0 0 12px;
+
+    font-family: var(--serif);
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.05;
+
+    color: #6f493b;
+}
+
+.skill-content p {
+    margin: 0;
+
+    font-family: var(--serif);
+    font-size: 18px;
+    line-height: 1.55;
+
+    color: #6a5449;
+}
+
+.skills-button-wrap {
+    margin-top: 48px;
+
+    text-align: center;
+}
+
+.skills-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    min-width: 280px;
+
+    padding: 14px 26px;
+
+    border: 1px solid rgba(185,135,113,.65);
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(217,182,160,.96),
+            rgba(185,135,113,.96)
+        );
+
+    color: #fff;
+
+    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+
+    box-shadow:
+        0 9px 22px rgba(108,68,52,.14);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.skills-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 13px 28px rgba(108,68,52,.20);
+}
+
+@media (max-width: 850px) {
+
+    .skills-section {
+        padding: 80px 0 90px;
+    }
+
+    .skills-container {
+        width: min(100% - 36px, 700px);
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card img {
+        height: 430px;
+    }
+
+}
+/* Ajustement vertical Mon savoir-faire */
+.skills-heading {
+    margin-bottom: 38px !important;
+}
+
+/* ==========================================================
+   Harmonisation section Mon savoir-faire
+========================================================== */
+
+.skills-section {
+    padding-top: 42px !important;
+    padding-bottom: 100px !important;
+}
+
+.skills-heading {
+    margin-bottom: 34px !important;
+    transform: translateY(-8px);
+}
+
+.skills-heading h2 {
+    font-size: clamp(44px, 4.4vw, 64px) !important;
+    line-height: 1.02 !important;
+}
+
+@media (max-width: 850px) {
+
+    .skills-section {
+        padding-top: 34px !important;
+    }
+
+    .skills-heading {
+        transform: none;
+    }
+
+}
+/* Harmonisation exacte du haut des sections */
+.about-section,
+.skills-section {
+    padding-top: 48px !important;
+}
+
+.skills-heading {
+    transform: none !important;
+}
+
+/* Ajustement fin Mon savoir-faire */
+.skills-heading {
+    padding-top: 12px !important;
+}
+
+/* Harmonisation des titres des cartes savoir-faire */
+.skill-content h3 {
+    min-height: 64px;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Titres centrés des cartes savoir-faire */
+.skill-content h3 {
+    width: 100%;
+    min-height: 64px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Titres centrés des cartes savoir-faire */
+.skill-content h3 {
+    width: 100%;
+    min-height: 64px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Remonter le contenu des cartes savoir-faire */
+.skill-content {
+    padding-top: 18px !important;
+}
+
+.skill-content h3 {
+    min-height: 38px !important;
+    margin-bottom: 8px !important;
+}
+
+.skill-content p {
+    margin-top: 0 !important;
+}
+
+/* Remonter le contenu des cartes savoir-faire */
+.skill-content {
+    padding-top: 18px !important;
+}
+
+.skill-content h3 {
+    min-height: 38px !important;
+    margin-bottom: 8px !important;
+}
+
+.skill-content p {
+    margin-top: 0 !important;
+}
+
+/* ==========================================================
+   Uniformisation de tous les boutons principaux
+   Référence : bouton Découvrir le salon
+========================================================== */
+
+.hero-button,
+.about-button,
+.skills-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 24px !important;
+
+    min-width: 315px !important;
+
+    padding: 17px 31px !important;
+
+    border-radius: 999px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d9b6a0,
+            #b98771
+        ) !important;
+
+    border: 1px solid rgba(185,135,113,.85) !important;
+
+    color: #ffffff !important;
+
+    font-size: 9px !important;
+    font-weight: 500 !important;
+    letter-spacing: 2.3px !important;
+    text-transform: uppercase !important;
+
+    box-shadow:
+        0 13px 30px rgba(108,68,52,.18) !important;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease !important;
+}
+
+.hero-button:hover,
+.about-button:hover,
+.skills-button:hover {
+    transform: translateY(-2px) !important;
+
+    box-shadow:
+        0 17px 34px rgba(108,68,52,.25) !important;
+}
+
+.hero-button span,
+.about-button span,
+.skills-button span {
+    font-size: 18px !important;
+    line-height: 1 !important;
+}
+/* Boutons principaux un peu plus fins */
+.hero-button,
+.about-button,
+.skills-button {
+    padding: 13px 28px !important;
+    min-width: 315px !important;
+}
+
+/* Hauteur strictement identique pour les 3 boutons */
+.hero-button,
+.about-button,
+.skills-button {
+    height: 46px !important;
+    min-height: 46px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* ==========================================================
+   BOUTON PRINCIPAL GLOBAL - RÈGLES VERROUILLÉES
+   À utiliser sur tous les boutons principaux : .site-button
+========================================================== */
+
+.site-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 315px !important;
+    min-width: 315px !important;
+    max-width: 315px !important;
+
+    height: 46px !important;
+    min-height: 46px !important;
+
+    padding: 0 28px !important;
+
+    gap: 24px !important;
+
+    border: 1px solid #b98771 !important;
+    border-radius: 999px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d9b6a0 0%,
+            #c99c84 48%,
+            #b98771 100%
+        ) !important;
+
+    color: #ffffff !important;
+
+    font-family: var(--sans) !important;
+    font-size: 9px !important;
+    font-weight: 500 !important;
+    line-height: 1 !important;
+
+    letter-spacing: 2.3px !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+
+    text-decoration: none !important;
+
+    box-shadow:
+        0 9px 22px rgba(108,68,52,.16) !important;
+
+    cursor: pointer !important;
+
+    transition:
+        transform .30s ease,
+        box-shadow .30s ease,
+        filter .30s ease !important;
+}
+
+.site-button span {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 18px !important;
+    height: 18px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    font-family: Arial, sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    line-height: 18px !important;
+
+    color: #ffffff !important;
+}
+
+.site-button:hover {
+    transform: translateY(-2px) !important;
+
+    filter: brightness(1.025) !important;
+
+    box-shadow:
+        0 13px 28px rgba(108,68,52,.23) !important;
+}
+
+.site-button:active {
+    transform: translateY(0) !important;
+
+    box-shadow:
+        0 7px 18px rgba(108,68,52,.18) !important;
+}
+
+.site-button:focus-visible {
+    outline: 2px solid rgba(185,135,113,.45) !important;
+    outline-offset: 4px !important;
+}
+
+/* Neutralise les anciennes différences entre les boutons */
+
+.hero-button,
+.about-button,
+.skills-button {
+    width: 315px !important;
+    min-width: 315px !important;
+    max-width: 315px !important;
+
+    height: 46px !important;
+    min-height: 46px !important;
+
+    padding: 0 28px !important;
+
+    margin-left: 0;
+    margin-right: 0;
+
+    border: 1px solid #b98771 !important;
+    border-radius: 999px !important;
+}
+
+/* Ajustement fin du bloc central du hero */
+.hero-content {
+    width: min(820px, 86%) !important;
+    padding: 28px 34px 34px !important;
+
+    background: rgba(251,247,241,.11) !important;
+    border: 1px solid rgba(200,170,134,.12) !important;
+    border-radius: 28px !important;
+
+    backdrop-filter: blur(2px) !important;
+
+    box-shadow: 0 10px 26px rgba(81,53,42,.05) !important;
+}
+
+/* Hero - version intermédiaire du bloc central */
+.hero-content {
+    width: min(870px, 88%) !important;
+    padding: 30px 36px 36px !important;
+
+    background: rgba(251,247,241,.14) !important;
+    border: 1px solid rgba(200,170,134,.16) !important;
+    border-radius: 28px !important;
+
+    backdrop-filter: blur(3px) !important;
+
+    box-shadow: 0 12px 30px rgba(81,53,42,.07) !important;
+}
+
+/* ==========================================================
+   BOUTONS PRINCIPAUX - VERSION AFFINÉE ET VERROUILLÉE
+========================================================== */
+
+.site-button,
+.hero-button,
+.about-button,
+.skills-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 305px !important;
+    min-width: 305px !important;
+    max-width: 305px !important;
+
+    height: 42px !important;
+    min-height: 42px !important;
+    max-height: 42px !important;
+
+    padding: 0 24px !important;
+    gap: 20px !important;
+
+    border: 1px solid #b98771 !important;
+    border-radius: 999px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d9b6a0 0%,
+            #c99c84 48%,
+            #b98771 100%
+        ) !important;
+
+    color: #ffffff !important;
+
+    font-family: var(--sans) !important;
+    font-size: 8px !important;
+    font-weight: 500 !important;
+    line-height: 1 !important;
+    letter-spacing: 2.3px !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    text-decoration: none !important;
+
+    box-shadow:
+        0 7px 18px rgba(108,68,52,.13) !important;
+
+    cursor: pointer !important;
+
+    transition:
+        transform .30s ease,
+        box-shadow .30s ease,
+        filter .30s ease !important;
+}
+
+.site-button span,
+.hero-button span,
+.about-button span,
+.skills-button span {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 16px !important;
+    height: 16px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    font-family: Arial, sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 16px !important;
+
+    color: #ffffff !important;
+}
+
+.site-button:hover,
+.hero-button:hover,
+.about-button:hover,
+.skills-button:hover {
+    transform: translateY(-2px) !important;
+    filter: brightness(1.02) !important;
+
+    box-shadow:
+        0 10px 22px rgba(108,68,52,.18) !important;
+}
+
+.site-button:active,
+.hero-button:active,
+.about-button:active,
+.skills-button:active {
+    transform: translateY(0) !important;
+
+    box-shadow:
+        0 5px 14px rgba(108,68,52,.14) !important;
+}
+
+.site-button:focus-visible,
+.hero-button:focus-visible,
+.about-button:focus-visible,
+.skills-button:focus-visible {
+    outline: 2px solid rgba(185,135,113,.40) !important;
+    outline-offset: 4px !important;
+}
+
+/* Remonter tout le bloc texte À propos */
+.about-content {
+    transform: translateY(-44px) !important;
+}
+
+@media (max-width: 850px) {
+    .about-content {
+        transform: none !important;
+    }
+}
+
+/* Ajustement fin supplémentaire du bloc À propos */
+.about-content {
+    transform: translateY(-54px) !important;
+}
+
+@media (max-width: 850px) {
+    .about-content {
+        transform: none !important;
+    }
+}
+
