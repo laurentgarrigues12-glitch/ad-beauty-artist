@@ -195,35 +195,6 @@
     }
 }
 
-/* À PROPOS - filtre translucide à l'intérieur de la photo */
-@media (min-width: 851px) {
-
-    #apropos .about-visual {
-        position: relative !important;
-        overflow: hidden !important;
-    }
-
-    #apropos .about-visual::after {
-        content: "" !important;
-        position: absolute !important;
-
-        top: 50px !important;
-        right: 50px !important;
-        bottom: 50px !important;
-        left: 50px !important;
-
-        z-index: 2 !important;
-
-        background: rgba(251,247,241,.14) !important;
-        border: 1px solid rgba(200,170,134,.16) !important;
-        backdrop-filter: blur(3px) !important;
-        -webkit-backdrop-filter: blur(3px) !important;
-        box-shadow: 0 12px 30px rgba(81,53,42,.07) !important;
-
-        pointer-events: none !important;
-    }
-}
-
 /* ==========================================================
    À PROPOS - FILTRE TRANSLUCIDE
    RÈGLE DE RÉFÉRENCE IDENTIQUE AU HERO
@@ -334,3 +305,128 @@
     }
 }
 
+
+/* Photo */
+    #apropos .about-image-wrap,
+    #apropos .about-image {
+        border-radius: 34px !important;
+    }
+
+    #apropos .about-image-wrap {
+        overflow: hidden !important;
+    }
+
+    /* Filtre translucide */
+    #apropos .about-image-wrap::after {
+        top: 50px !important;
+        right: 50px !important;
+        bottom: 50px !important;
+        left: 50px !important;
+
+        border-radius: 34px !important;
+
+        background: rgba(251,247,241,.14) !important;
+        border: 1px solid rgba(200,170,134,.16) !important;
+        backdrop-filter: blur(3px) !important;
+        -webkit-backdrop-filter: blur(3px) !important;
+        box-shadow: 0 12px 30px rgba(81,53,42,.07) !important;
+    }
+}
+
+
+/* Si le filtre translucide est sur le conteneur */
+    #apropos .about-visual::after {
+        border-radius: 34px !important;
+    }
+}
+
+
+/* ==========================================================
+   À PROPOS - PHOTO + FILTRE TRANSLUCIDE FINAL
+========================================================== */
+
+@media (min-width: 851px) {
+
+    #apropos .about-visual {
+        position: relative !important;
+        overflow: visible !important;
+    }
+
+    #apropos .about-image-wrap {
+        position: relative !important;
+        overflow: hidden !important;
+        border-radius: 34px !important;
+        z-index: 2 !important;
+    }
+
+    #apropos .about-image {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 34px !important;
+    }
+
+    #apropos .about-image-wrap::after {
+        content: "" !important;
+        position: absolute !important;
+
+        top: 50px !important;
+        right: 50px !important;
+        bottom: 50px !important;
+        left: 50px !important;
+
+        border-radius: 34px !important;
+        z-index: 3 !important;
+        pointer-events: none !important;
+
+        background: rgba(251,247,241,.14) !important;
+        border: 1px solid rgba(200,170,134,.16) !important;
+
+        backdrop-filter: blur(3px) !important;
+        -webkit-backdrop-filter: blur(3px) !important;
+
+        box-shadow: 0 12px 30px rgba(81,53,42,.07) !important;
+    }
+
+    /* Ancien filtre désactivé */
+    #apropos .about-visual::after {
+        display: none !important;
+        content: none !important;
+    }
+}
+
+
+/* ==========================================================
+   À PROPOS - ARRONDI PHOTO FINAL
+========================================================== */
+@media (min-width: 851px) {
+
+    #apropos .about-image-wrap {
+        position: relative !important;
+        display: block !important;
+        width: 100% !important;
+        height: 560px !important;
+
+        overflow: hidden !important;
+        border-radius: 34px !important;
+
+        clip-path: none !important;
+        -webkit-clip-path: none !important;
+        z-index: 2 !important;
+    }
+
+    #apropos .about-image-wrap .about-image {
+        display: block !important;
+        width: 100% !important;
+        height: 100% !important;
+
+        object-fit: cover !important;
+        object-position: center !important;
+
+        border-radius: 34px !important;
+        clip-path: none !important;
+        -webkit-clip-path: none !important;
+
+        box-shadow: none !important;
+    }
+}
