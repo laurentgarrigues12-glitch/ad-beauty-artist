@@ -301,7 +301,7 @@
 @media (min-width: 851px) {
     #apropos .about-content {
         position: relative !important;
-        top: -11px !important;
+        top: -6px !important;
     }
 }
 
@@ -428,5 +428,33 @@
         -webkit-clip-path: none !important;
 
         box-shadow: none !important;
+    }
+}
+
+/* À PROPOS - baisser bouton + ornement de 3 px */
+@media (min-width: 851px) {
+    #apropos .about-button {
+        position: relative !important;
+        top: 5px !important;
+    }
+
+    #apropos .about-ornament-zone {
+        position: relative !important;
+        top: -11px !important;
+    }
+}
+
+/* À PROPOS - affiner uniquement le trait avant le losange */
+@media (min-width: 851px) {
+    #apropos .about-ornament-ref .line:first-child {
+        height: 0.5px !important;
+    }
+}
+
+/* À PROPOS - même finesse de trait que MON SAVOIR-FAIRE */
+@media (min-width: 851px) {
+    #apropos .about-ornament-ref .line {
+        height: 1px !important;
+        background: rgba(187,139,117,.42) !important;
     }
 }
