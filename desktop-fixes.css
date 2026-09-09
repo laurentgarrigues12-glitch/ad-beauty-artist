@@ -1,0 +1,310 @@
+/* Corrections finales desktop AD Beauty Artist */
+
+@media (min-width: 851px) {
+    #apropos .about-content {
+        position: relative !important;
+        top: -5px !important;
+    }
+}
+/* SAVOIR-FAIRE - remonter le bloc des cartes de 5 px sur desktop */
+@media (min-width: 851px) {
+    #savoir-faire .skills-grid {
+        position: relative !important;
+        top: -10px !important;
+    }
+}
+
+/* SAVOIR-FAIRE - remonter bouton + ornement de 5 px */
+@media (min-width: 851px) {
+    #savoir-faire .skills-button-wrap {
+        position: relative !important;
+        top: -15px !important;
+    }
+}
+
+/* À PROPOS - remonter l'ornement de 3 px */
+@media (min-width: 851px) {
+    #apropos .about-ornament-ref {
+        transform: translateY(9px) !important;
+    }
+}
+
+/* À PROPOS - remonter réellement l'ornement de 6 px */
+@media (min-width: 851px) {
+    #apropos .about-ornament-zone {
+        position: relative !important;
+        top: -11px !important;
+    }
+}
+
+/* SAVOIR-FAIRE - remonter toute la section de 10 px */
+@media (min-width: 851px) {
+    #savoir-faire {
+        position: relative !important;
+        top: -10px !important;
+    }
+}
+
+/* SAVOIR-FAIRE - remonter les fiches de 5 px */
+@media (min-width: 851px) {
+    #savoir-faire .skills-grid,
+    #savoir-faire .skills-cards,
+    #savoir-faire .skills-list {
+        position: relative !important;
+        top: -10px !important;
+    }
+}
+
+/* SAVOIR-FAIRE - remonter réellement les 3 fiches de 5 px */
+@media (min-width: 851px) {
+    #savoir-faire .skills-grid {
+        transform: translateY(-5px) !important;
+    }
+}
+
+/* SAVOIR-FAIRE - remonter bouton + ornement de 5 px */
+@media (min-width: 851px) {
+
+    #savoir-faire .skills-button-wrap {
+        position: relative !important;
+        top: -15px !important;
+    }
+
+}
+
+/* À PROPOS - remonter le cadre fin sous la photo */
+@media (min-width: 851px) {
+    #apropos .about-image-frame {
+        transform: translateY(-12px) !important;
+    }
+}
+
+/* À PROPOS - remonter le cadre fin de 12 px */
+@media (min-width: 851px) {
+    #apropos .about-image-frame {
+        top: 9px !important;
+    }
+}
+
+/* À PROPOS - cadre : même écart en haut et à droite */
+@media (min-width: 851px) {
+
+    #apropos .about-image-frame {
+        top: 9px !important;
+        left: 9px !important;
+    }
+
+}
+
+/* À PROPOS - cadre : même écart en haut et à droite */
+@media (min-width: 851px) {
+
+    #apropos .about-image-frame {
+        top: 9px !important;
+        left: 9px !important;
+    }
+
+}
+
+/* À PROPOS - supprimer le liseré autour de la photo */
+#apropos .about-image-frame {
+    display: none !important;
+}
+
+/* À PROPOS - restaurer la règle d'espacement du début de section */
+@media (min-width: 851px) {
+    #apropos .about-eyebrow {
+        margin-top: 7px !important;
+    }
+}
+
+/* À PROPOS - baisser uniquement le bouton de 5 px */
+@media (min-width: 851px) {
+    #apropos .about-button {
+        position: relative !important;
+        top: 5px !important;
+    }
+}
+
+/* À PROPOS - baisser tout le bloc de 3 px */
+@media (min-width: 851px) {
+    #apropos .about-content {
+        position: relative !important;
+        top: -2px !important;
+    }
+}
+
+/* ==========================================================
+   ORNEMENTS SECONDAIRES
+   RÈGLE : même finesse que l’ornement du hero
+========================================================== */
+
+#apropos .about-ornament-ref,
+#savoir-faire .savoir-faire-ornament {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 18px !important;
+
+    width: 410px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+#apropos .about-ornament-ref .line,
+#savoir-faire .savoir-faire-ornament .line {
+    display: block !important;
+    width: 180px !important;
+    height: 1px !important;
+    background: rgba(187, 139, 117, 0.42) !important;
+    border: none !important;
+}
+
+#apropos .about-ornament-ref .diamond,
+#savoir-faire .savoir-faire-ornament .diamond {
+    display: block !important;
+    width: 8px !important;
+    height: 8px !important;
+    background: rgba(187, 139, 117, 0.72) !important;
+    transform: rotate(45deg) !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+/* ==========================================================
+   SAVOIR-FAIRE - ECART SUPERIEUR FINAL : 63 PX
+========================================================== */
+@media (min-width: 851px) {
+
+    #savoir-faire {
+        top: 0 !important;
+        padding-top: 48px !important;
+    }
+
+    #savoir-faire .skills-heading {
+        position: relative !important;
+        top: 0 !important;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        transform: none !important;
+    }
+
+    #savoir-faire .skills-eyebrow {
+        margin-top: 0 !important;
+    }
+}
+
+/* À PROPOS - filtre translucide à l'intérieur de la photo */
+@media (min-width: 851px) {
+
+    #apropos .about-visual {
+        position: relative !important;
+        overflow: hidden !important;
+    }
+
+    #apropos .about-visual::after {
+        content: "" !important;
+        position: absolute !important;
+
+        top: 24px !important;
+        right: 24px !important;
+        bottom: 24px !important;
+        left: 24px !important;
+
+        z-index: 2 !important;
+
+        background: rgba(251,247,241,.14) !important;
+        border: 1px solid rgba(200,170,134,.16) !important;
+        backdrop-filter: blur(3px) !important;
+        -webkit-backdrop-filter: blur(3px) !important;
+        box-shadow: 0 12px 30px rgba(81,53,42,.07) !important;
+
+        pointer-events: none !important;
+    }
+}
+
+/* ==========================================================
+   À PROPOS - FILTRE TRANSLUCIDE
+   RÈGLE DE RÉFÉRENCE IDENTIQUE AU HERO
+========================================================== */
+@media (min-width: 851px) {
+
+    #apropos .about-visual {
+        position: relative !important;
+        overflow: hidden !important;
+    }
+
+    #apropos .about-visual::after {
+        content: "" !important;
+        position: absolute !important;
+
+        top: 24px !important;
+        right: 24px !important;
+        bottom: 24px !important;
+        left: 24px !important;
+
+        z-index: 2 !important;
+        pointer-events: none !important;
+
+        background: rgba(251,247,241,.14) !important;
+        border: 1px solid rgba(200,170,134,.16) !important;
+
+        backdrop-filter: blur(3px) !important;
+        -webkit-backdrop-filter: blur(3px) !important;
+
+        box-shadow: 0 12px 30px rgba(81,53,42,.07) !important;
+    }
+}
+
+/* ==========================================================
+   À PROPOS - FILTRE TRANSLUCIDE FINAL
+   Strictement à l'intérieur de la photo
+========================================================== */
+
+@media (min-width: 851px) {
+
+    /* Désactive l'ancien filtre posé sur tout about-visual */
+    #apropos .about-visual::after {
+        display: none !important;
+        content: none !important;
+    }
+
+    #apropos .about-image-wrap {
+        position: relative !important;
+        z-index: 2 !important;
+        overflow: hidden !important;
+        border-radius: 36px !important;
+    }
+
+    #apropos .about-image-wrap .about-image {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 36px !important;
+    }
+
+    #apropos .about-image-wrap::after {
+        content: "" !important;
+        position: absolute !important;
+
+        top: 24px !important;
+        right: 24px !important;
+        bottom: 24px !important;
+        left: 24px !important;
+
+        z-index: 3 !important;
+        pointer-events: none !important;
+
+        border-radius: 24px !important;
+
+        /* Règle translucide de référence */
+        background: rgba(251,247,241,.14) !important;
+        border: 1px solid rgba(200,170,134,.16) !important;
+
+        backdrop-filter: blur(3px) !important;
+        -webkit-backdrop-filter: blur(3px) !important;
+
+        box-shadow: 0 12px 30px rgba(81,53,42,.07) !important;
+    }
+}

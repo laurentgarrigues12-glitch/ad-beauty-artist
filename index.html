@@ -20,6 +20,7 @@
     >
 
     <link rel="stylesheet" href="styles.css?v=mobile-center-2">
+    <link rel="stylesheet" href="desktop-fixes.css?v=1">
 </head>
 
 <body>
@@ -49,8 +50,8 @@
     <nav class="nav">
         <a href="#accueil" class="active">Accueil</a>
         <a href="#apropos">À propos</a>
-        <a href="#salon">Le salon</a>
         <a href="#savoir-faire">Savoir-faire</a>
+        <a href="#salon">Le salon</a>
         <a href="#prestations">Prestations</a>
         <a href="#galerie">Galerie</a>
         <a href="#contact">Contact</a>
@@ -115,12 +116,12 @@
     <div class="about-container">
 
         <div class="about-visual">
-            <img
-                src="assets/images/about.webp"
+            <div class="about-image-wrap"><img
+                src="assets/images/about-monochrome.webp"
                 alt="Ad Beauty Artist - portrait ou travail en salon"
                 class="about-image"
                 loading="lazy"
-            >
+            ></div>
 
             <div class="about-image-frame"></div>
         </div>
@@ -140,19 +141,27 @@
             </h2>
 
             <p>
-                Coiffeuse experte depuis plus de 17 ans, je vous accompagne
-                avec une approche exigeante, élégante et entièrement personnalisée.
+                Coiffeuse experte depuis plus de 17 ans, je propose une approche élégante, précise et entièrement personnalisée de la beauté.
             </p>
 
             <p>
-                Spécialisée notamment dans les blonds sur mesure, les extensions
-                et la mise en beauté événementielle, je place l'écoute,
-                la précision et le sens du détail au cœur de chaque prestation.
+                Spécialisée dans les blonds sur mesure, les extensions capillaires et la mise en beauté événementielle, j'accorde une attention particulière à la technicité, au détail et au respect du cheveu.
             </p>
 
+            <p>
+                Coupe, coloration, coiffure, maquillage et soins profonds : chaque prestation est pensée comme une expérience sur mesure, où écoute, expertise et excellence sont essentielles.
+            </p>
             <a href="#" class="about-button site-button">
-                Découvrir mon univers <span>→</span>
-            </a>
+    Découvrir mon univers <span>→</span>
+</a>
+
+<div class="about-ornament-zone" aria-hidden="true">
+    <div class="about-ornament-ref">
+        <span class="line"></span>
+        <span class="diamond"></span>
+        <span class="line"></span>
+    </div>
+</div>
 
         </div>
 
@@ -258,6 +267,11 @@
             <a href="#" class="skills-button site-button">
                 Découvrir mon savoir-faire <span>→</span>
             </a>
+<div class="savoir-faire-ornament" aria-hidden="true">
+    <span class="line"></span>
+    <span class="diamond"></span>
+    <span class="line"></span>
+</div>
 
         </div>
 
