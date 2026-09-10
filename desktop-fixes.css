@@ -111,9 +111,9 @@
 
         position: absolute !important;
 
-        top: 50px !important;
+        top: 120px !important;
         right: 50px !important;
-        bottom: 50px !important;
+        bottom: 120px !important;
         left: 50px !important;
 
         border-radius: 34px !important;
@@ -354,3 +354,166 @@
 /* ==========================================================
    FIN DES CORRECTIONS
 ========================================================== */
+/* ==========================================================
+   SÉPARATION VISUELLE À PROPOS / SAVOIR-FAIRE
+========================================================== */
+
+#apropos {
+    background: #f7f2ed !important;
+}
+
+#savoir-faire {
+    background: #f1e9e2 !important;
+}
+
+/* SAVOIR-FAIRE - remonter uniquement le titre de 10 px */
+@media (min-width: 851px) {
+    #savoir-faire .skills-heading h2 {
+        position: relative !important;
+        top: -14px !important;
+    }
+}
+
+/* SAVOIR-FAIRE - remonter tout le contenu de 3 px */
+@media (min-width: 851px) {
+    #savoir-faire .skills-container {
+        position: relative !important;
+        top: -6px !important;
+    }
+}
+
+
+/* ==========================================================
+   À PROPOS - TEXTE SUR FILTRE TRANSLUCIDE
+========================================================== */
+
+@media (min-width: 851px) {
+
+    #apropos .about-photo-text {
+        position: absolute !important;
+
+        top: 50% !important;
+        left: 50% !important;
+
+        transform: translate(-50%, -50%) !important;
+
+        z-index: 4 !important;
+
+        width: calc(100% - 140px) !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+
+        text-align: center !important;
+
+        pointer-events: none !important;
+
+        text-shadow: 0 2px 8px rgba(81,53,42,.18) !important;
+    }
+
+    #apropos .about-photo-text strong {
+        font-family: var(--serif) !important;
+
+        font-size: 30px !important;
+        font-weight: 500 !important;
+
+        letter-spacing: 2px !important;
+
+        color: #fffaf6 !important;
+    }
+
+    #apropos .about-photo-text span {
+        margin-top: 8px !important;
+
+        font-family: var(--sans) !important;
+
+        font-size: 10px !important;
+        font-weight: 400 !important;
+
+        letter-spacing: 2.2px !important;
+
+        text-transform: uppercase !important;
+
+        color: rgba(255,250,246,.92) !important;
+    }
+
+}
+
+/* Pas de texte ajouté sur mobile pour l'instant */
+@media (max-width: 850px) {
+    #apropos .about-photo-text {
+        display: none !important;
+    }
+}
+
+/* ==========================================================
+   À PROPOS - TEXTE SUR FILTRE TRANSLUCIDE
+========================================================== */
+
+@media (min-width: 851px) {
+
+    #apropos .about-photo-text {
+        position: absolute !important;
+
+        top: 50% !important;
+        left: 50% !important;
+
+        transform: translate(-50%, -50%) !important;
+
+        z-index: 4 !important;
+
+        width: calc(100% - 140px) !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+
+        text-align: center !important;
+
+        pointer-events: none !important;
+
+        text-shadow: 0 2px 8px rgba(81,53,42,.18) !important;
+    }
+
+    #apropos .about-photo-text strong {
+        font-family: var(--serif) !important;
+
+        font-size: 30px !important;
+        font-weight: 500 !important;
+
+        letter-spacing: 2px !important;
+
+        color: #fffaf6 !important;
+    }
+
+    #apropos .about-photo-text span {
+        margin-top: 8px !important;
+
+        font-family: var(--sans) !important;
+
+        font-size: 10px !important;
+        font-weight: 400 !important;
+
+        letter-spacing: 2.2px !important;
+
+        text-transform: uppercase !important;
+
+        color: rgba(255,250,246,.92) !important;
+    }
+
+}
+
+/* Pas de texte ajouté sur mobile pour l'instant */
+@media (max-width: 850px) {
+    #apropos .about-photo-text {
+        display: none !important;
+    }
+}
+
+/* À PROPOS - rapprocher SAVOIR-FAIRE de 10 px supplémentaires */
+@media (min-width: 851px) {
+    #apropos {
+        margin-bottom: -21px !important;
+    }
+}

@@ -763,7 +763,7 @@ section[id]:not(#accueil) {
 
 .about-section {
     padding-top: 28px !important;
-    padding-bottom: 55px !important;
+    padding-bottom: 0px !important;
 }
 
 .about-container {
