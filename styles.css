@@ -2285,10 +2285,7 @@ header a[href*="facebook"]:hover {
         0 7px 18px rgba(108,68,52,.10) !important;
 }
 
-/* Annulation WhatsApp */
-.social a[aria-label="WhatsApp"] {
-    display: none !important;
-}
+
 
 /* HEADER - centrer le sous-titre sous BEAUTY ARTIST */
 .brand-text {
@@ -2486,4 +2483,18 @@ header a[href*="facebook"]:hover {
         top: -5px !important;
     }
 
+}
+
+/* Réseaux sociaux - centrage icônes */
+.social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social a svg {
+    width: 14px;
+    height: 14px;
+    display: block;
+    fill: currentColor;
 }

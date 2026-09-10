@@ -1,106 +1,61 @@
 /* ==========================================================
    AD BEAUTY ARTIST
-   CORRECTIONS FINALES DESKTOP + MENU MOBILE
+   DESKTOP FIXES - VERSION NETTOYÉE
 ========================================================== */
-
 
 /* ==========================================================
    À PROPOS - DESKTOP
 ========================================================== */
-
 @media (min-width: 851px) {
-
-    /* Position du contenu */
     #apropos .about-content {
         position: relative !important;
-        top: -6px !important;
+        top: 16px !important;
     }
 
-    /* Petit titre À PROPOS */
-    #apropos .about-eyebrow {
-        margin-top: 7px !important;
-    }
-
-    /* Bouton */
-    #apropos .about-button {
+    #apropos .about-button.site-button {
         position: relative !important;
         top: 5px !important;
     }
 
-    /* Zone ornement sous bouton */
-    #apropos .about-ornament-zone {
-        position: relative !important;
-        top: -11px !important;
-    }
-
-    #apropos .about-ornament-ref {
-        transform: translateY(9px) !important;
-    }
-
-}
-
-
-/* ==========================================================
-   À PROPOS - PHOTO
-========================================================== */
-
-#apropos .about-image-frame {
-    display: none !important;
-}
-
-@media (min-width: 851px) {
-
     #apropos .about-visual {
         position: relative !important;
+        top: -15px !important;
         overflow: visible !important;
     }
 
     #apropos .about-image-wrap {
         position: relative !important;
-
         display: block !important;
-
         width: 100% !important;
         height: 560px !important;
-
         overflow: hidden !important;
-
         border-radius: 34px !important;
-
         clip-path: none !important;
         -webkit-clip-path: none !important;
-
         z-index: 2 !important;
     }
 
     #apropos .about-image-wrap .about-image {
         display: block !important;
-
         width: 100% !important;
         height: 100% !important;
-
         object-fit: cover !important;
         object-position: center !important;
-
         border-radius: 34px !important;
-
         clip-path: none !important;
         -webkit-clip-path: none !important;
-
         box-shadow: none !important;
     }
-
 }
 
+#apropos .about-image-frame {
+    display: none !important;
+}
 
 /* ==========================================================
    À PROPOS - FILTRE TRANSLUCIDE
-   50 PX À L'INTÉRIEUR DE LA PHOTO
 ========================================================== */
-
 @media (min-width: 851px) {
-
-    /* Ancien filtre désactivé */
     #apropos .about-visual::after {
         display: none !important;
         content: none !important;
@@ -108,67 +63,138 @@
 
     #apropos .about-image-wrap::after {
         content: "" !important;
-
         position: absolute !important;
-
         top: 120px !important;
         right: 50px !important;
         bottom: 120px !important;
         left: 50px !important;
-
         border-radius: 34px !important;
-
         z-index: 3 !important;
         pointer-events: none !important;
-
         background: rgba(251,247,241,.14) !important;
-
-        border:
-            1px solid rgba(200,170,134,.16) !important;
-
+        border: 1px solid rgba(200,170,134,.16) !important;
         backdrop-filter: blur(3px) !important;
         -webkit-backdrop-filter: blur(3px) !important;
-
-        box-shadow:
-            0 12px 30px rgba(81,53,42,.07) !important;
+        box-shadow: 0 12px 30px rgba(81,53,42,.07) !important;
     }
-
 }
 
+/* ==========================================================
+   À PROPOS - TEXTE SUR FILTRE
+========================================================== */
+@media (min-width: 851px) {
+    #apropos .about-photo-text {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        z-index: 4 !important;
+        width: calc(100% - 140px) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        pointer-events: none !important;
+        text-shadow: 0 2px 8px rgba(81,53,42,.18) !important;
+    }
+
+    #apropos .about-photo-text strong {
+        font-family: var(--serif) !important;
+        font-size: 30px !important;
+        font-weight: 500 !important;
+        letter-spacing: 2px !important;
+        color: #fffaf6 !important;
+    }
+
+    #apropos .about-photo-text span {
+        margin-top: 8px !important;
+        font-family: var(--sans) !important;
+        font-size: 10px !important;
+        font-weight: 400 !important;
+        letter-spacing: 2.2px !important;
+        text-transform: uppercase !important;
+        color: rgba(255,250,246,.92) !important;
+    }
+}
+
+@media (max-width: 850px) {
+    #apropos .about-photo-text {
+        display: none !important;
+    }
+}
+
+/* ==========================================================
+   À PROPOS - STYLE PREMIUM SANS ORNEMENT
+========================================================== */
+#apropos {
+    background: #f7f2ed !important;
+}
+
+#apropos .about-eyebrow {
+    display: inline-block !important;
+    font-family: var(--serif) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    letter-spacing: 4.5px !important;
+    text-transform: uppercase !important;
+    color: rgba(133,82,63,.88) !important;
+    line-height: 1 !important;
+    margin: 0 0 18px 0 !important;
+    text-shadow: 0 1px 6px rgba(81,53,42,.05) !important;
+}
+
+#apropos .about-eyebrow::before,
+#apropos .about-eyebrow::after {
+    content: none !important;
+    display: none !important;
+}
+
+#apropos .about-divider,
+#apropos .about-ornament-ref {
+    display: none !important;
+}
+
+@media (min-width: 851px) {
+    #apropos {
+        margin-bottom: -21px !important;
+    }
+}
 
 /* ==========================================================
    SAVOIR-FAIRE - DESKTOP
 ========================================================== */
+#savoir-faire {
+    background: #f1e9e2 !important;
+}
 
 @media (min-width: 851px) {
-
     #savoir-faire {
         position: relative !important;
         top: 0 !important;
         padding-top: 48px !important;
     }
 
+    #savoir-faire .skills-container {
+        position: relative !important;
+        top: -8px !important;
+    }
+
     #savoir-faire .skills-heading {
         position: relative !important;
-
         top: 0 !important;
-
         margin-top: 0 !important;
         padding-top: 0 !important;
-
         transform: none !important;
     }
 
-    #savoir-faire .skills-eyebrow {
-        margin-top: 0 !important;
+    #savoir-faire .skills-heading h2 {
+        position: relative !important;
+        top: -14px !important;
     }
 
-    /* Cartes */
     #savoir-faire .skills-grid {
         position: relative !important;
-
         top: -12px !important;
-
         transform: translateY(-5px) !important;
     }
 
@@ -178,342 +204,188 @@
         top: -12px !important;
     }
 
-    /* Bouton + ornement */
     #savoir-faire .skills-button-wrap {
         position: relative !important;
         top: -15px !important;
     }
-
 }
 
+/* ==========================================================
+   MON SAVOIR-FAIRE - STYLE PREMIUM SANS ORNEMENT
+========================================================== */
+#savoir-faire .skills-eyebrow {
+    display: inline-block !important;
+    position: relative !important;
+    top: -3px !important;
+    font-family: var(--serif) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    letter-spacing: 4.5px !important;
+    text-transform: uppercase !important;
+    color: rgba(133,82,63,.88) !important;
+    line-height: 1 !important;
+    margin: 0 0 18px 0 !important;
+    text-shadow: 0 1px 6px rgba(81,53,42,.05) !important;
+}
+
+#savoir-faire .skills-divider,
+#savoir-faire .savoir-faire-ornament {
+    display: none !important;
+}
 
 /* ==========================================================
-   ORNEMENTS PRINCIPAUX SOUS LES BOUTONS
+   SAVOIR-FAIRE - FILTRE TRANSLUCIDE PROPORTIONNEL
 ========================================================== */
+#savoir-faire .skill-image-wrap {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+}
 
-#apropos .about-ornament-ref,
-#savoir-faire .savoir-faire-ornament {
+#savoir-faire .skill-image-wrap img {
+    display: block !important;
+    width: 100% !important;
+}
+
+#savoir-faire .skill-image-wrap::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 24% !important;
+    right: 12% !important;
+    bottom: 24% !important;
+    left: 12% !important;
+    border-radius: 34px !important;
+    z-index: 3 !important;
+    pointer-events: none !important;
+    background: rgba(251,247,241,.14) !important;
+    border: 1px solid rgba(200,170,134,.16) !important;
+    backdrop-filter: blur(3px) !important;
+    -webkit-backdrop-filter: blur(3px) !important;
+    box-shadow: 0 12px 30px rgba(81,53,42,.07) !important;
+}
+
+/* ==========================================================
+   SAVOIR-FAIRE - TITRES SUR FILTRE
+========================================================== */
+#savoir-faire .skill-photo-title {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 4 !important;
+    width: 74% !important;
+    margin: 0 !important;
     display: flex !important;
-
+    flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-
-    gap: 12px !important;
-
-    width: 410px !important;
-
-    margin-left: auto !important;
-    margin-right: auto !important;
+    text-align: center !important;
+    pointer-events: none !important;
 }
 
-
-/* Traits */
-
-#apropos .about-ornament-ref .line,
-#savoir-faire .savoir-faire-ornament .line {
-    display: block !important;
-
-    height: 1px !important;
-
-    flex: 1 1 auto !important;
-
-    background: rgba(178,119,92,.65) !important;
-
-    border: none !important;
-    box-shadow: none !important;
+#savoir-faire .skill-photo-title strong {
+    font-family: var(--serif) !important;
+    font-size: 21px !important;
+    font-weight: 500 !important;
+    letter-spacing: 1.2px !important;
+    color: #fffaf6 !important;
+    text-shadow: 0 2px 8px rgba(81,53,42,.18) !important;
 }
 
+#savoir-faire .skill-photo-title span {
+    margin-top: 6px !important;
+    font-family: var(--sans) !important;
+    font-size: 9px !important;
+    font-weight: 400 !important;
+    letter-spacing: 1.8px !important;
+    text-transform: uppercase !important;
+    color: rgba(255,250,246,.92) !important;
+    text-shadow: 0 2px 8px rgba(81,53,42,.18) !important;
+}
 
 /* ==========================================================
-   PETITS ORNEMENTS
+   HERO - BOUTON
 ========================================================== */
+#accueil .site-button {
+    position: relative !important;
+    top: -3px !important;
+}
 
-#apropos .about-divider,
-#savoir-faire .skills-divider {
+/* ==========================================================
+   HEADER - 3 RÉSEAUX SOCIAUX
+========================================================== */
+.social {
     display: flex !important;
     align-items: center !important;
-
-    gap: 12px !important;
+    width: auto !important;
+    min-width: max-content !important;
+    overflow: visible !important;
+    flex-shrink: 0 !important;
 }
-
-#apropos .about-divider.divider {
-    width: 90px !important;
-    max-width: none !important;
-
-    margin: 0 0 28px !important;
-}
-
-#savoir-faire .skills-divider.divider {
-    width: 120px !important;
-    max-width: none !important;
-
-    margin: 0 auto 26px !important;
-}
-
 
 /* ==========================================================
-   TOUS LES TRAITS
-   RÉFÉRENCE HERO
+   TIKTOK - BOUTON + PICTOGRAMME
 ========================================================== */
-
-#apropos .about-divider span,
-#apropos .about-ornament-ref .line,
-#savoir-faire .skills-divider span,
-#savoir-faire .savoir-faire-ornament .line {
-    height: 1px !important;
-
-    flex: 1 1 auto !important;
-
-    background: rgba(178,119,92,.65) !important;
-
-    border: none !important;
-    box-shadow: none !important;
-}
-
-
-/* ==========================================================
-   TOUS LES LOSANGES
-   RÉFÉRENCE EXACTE HERO : 7 × 7 PX
-========================================================== */
-
-#apropos .about-divider i,
-#apropos .about-ornament-ref .diamond,
-#savoir-faire .skills-divider i,
-#savoir-faire .savoir-faire-ornament .diamond {
-    display: block !important;
-
-    width: 7px !important;
-    height: 7px !important;
-
-    min-width: 7px !important;
-    min-height: 7px !important;
-
-    max-width: 7px !important;
-    max-height: 7px !important;
-
-    flex: 0 0 7px !important;
-
-    margin: 0 !important;
+.social a[aria-label="TikTok"] {
+    position: relative !important;
+    width: 32px !important;
+    height: 32px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     padding: 0 !important;
-
-    background: var(--rose) !important;
-
-    border: 0 !important;
-    outline: 0 !important;
-
-    box-shadow: none !important;
-
-    transform: rotate(45deg) !important;
-    transform-origin: center center !important;
-
+    border: 1px solid rgba(185,135,113,.40) !important;
+    border-radius: 50% !important;
+    color: var(--brown) !important;
     box-sizing: border-box !important;
 }
 
+.social a[aria-label="TikTok"]::before,
+.social a[aria-label="TikTok"]::after {
+    content: none !important;
+    display: none !important;
+}
+
+.social a[aria-label="TikTok"] svg {
+    position: relative !important;
+    display: block !important;
+    width: 22px !important;
+    height: 22px !important;
+    left: 0 !important;
+    top: 1px !important;
+    color: inherit !important;
+    overflow: visible !important;
+}
+
+.social a[aria-label="TikTok"]:hover {
+    border-color: rgba(185,135,113,.72) !important;
+    background: rgba(217,182,160,.20) !important;
+    box-shadow: 0 7px 18px rgba(108,68,52,.10) !important;
+}
 
 /* ==========================================================
    MENU MOBILE
-   FERMÉ PAR DÉFAUT
 ========================================================== */
-
 @media (max-width: 850px) {
-
     .nav {
         transform: translateY(-120%) !important;
-
         visibility: hidden !important;
         opacity: 0 !important;
-
         pointer-events: none !important;
-
         transition:
             transform .35s ease,
             opacity .25s ease,
             visibility 0s linear .35s !important;
     }
 
-
-    /* MENU OUVERT */
-
     .nav.open {
         transform: translateY(0) !important;
-
         visibility: visible !important;
         opacity: 1 !important;
-
         pointer-events: auto !important;
-
         transition:
             transform .35s ease,
             opacity .25s ease,
             visibility 0s linear 0s !important;
-    }
-
-}
-
-
-/* ==========================================================
-   FIN DES CORRECTIONS
-========================================================== */
-/* ==========================================================
-   SÉPARATION VISUELLE À PROPOS / SAVOIR-FAIRE
-========================================================== */
-
-#apropos {
-    background: #f7f2ed !important;
-}
-
-#savoir-faire {
-    background: #f1e9e2 !important;
-}
-
-/* SAVOIR-FAIRE - remonter uniquement le titre de 10 px */
-@media (min-width: 851px) {
-    #savoir-faire .skills-heading h2 {
-        position: relative !important;
-        top: -14px !important;
-    }
-}
-
-/* SAVOIR-FAIRE - remonter tout le contenu de 3 px */
-@media (min-width: 851px) {
-    #savoir-faire .skills-container {
-        position: relative !important;
-        top: -6px !important;
-    }
-}
-
-
-/* ==========================================================
-   À PROPOS - TEXTE SUR FILTRE TRANSLUCIDE
-========================================================== */
-
-@media (min-width: 851px) {
-
-    #apropos .about-photo-text {
-        position: absolute !important;
-
-        top: 50% !important;
-        left: 50% !important;
-
-        transform: translate(-50%, -50%) !important;
-
-        z-index: 4 !important;
-
-        width: calc(100% - 140px) !important;
-
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-
-        text-align: center !important;
-
-        pointer-events: none !important;
-
-        text-shadow: 0 2px 8px rgba(81,53,42,.18) !important;
-    }
-
-    #apropos .about-photo-text strong {
-        font-family: var(--serif) !important;
-
-        font-size: 30px !important;
-        font-weight: 500 !important;
-
-        letter-spacing: 2px !important;
-
-        color: #fffaf6 !important;
-    }
-
-    #apropos .about-photo-text span {
-        margin-top: 8px !important;
-
-        font-family: var(--sans) !important;
-
-        font-size: 10px !important;
-        font-weight: 400 !important;
-
-        letter-spacing: 2.2px !important;
-
-        text-transform: uppercase !important;
-
-        color: rgba(255,250,246,.92) !important;
-    }
-
-}
-
-/* Pas de texte ajouté sur mobile pour l'instant */
-@media (max-width: 850px) {
-    #apropos .about-photo-text {
-        display: none !important;
-    }
-}
-
-/* ==========================================================
-   À PROPOS - TEXTE SUR FILTRE TRANSLUCIDE
-========================================================== */
-
-@media (min-width: 851px) {
-
-    #apropos .about-photo-text {
-        position: absolute !important;
-
-        top: 50% !important;
-        left: 50% !important;
-
-        transform: translate(-50%, -50%) !important;
-
-        z-index: 4 !important;
-
-        width: calc(100% - 140px) !important;
-
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-
-        text-align: center !important;
-
-        pointer-events: none !important;
-
-        text-shadow: 0 2px 8px rgba(81,53,42,.18) !important;
-    }
-
-    #apropos .about-photo-text strong {
-        font-family: var(--serif) !important;
-
-        font-size: 30px !important;
-        font-weight: 500 !important;
-
-        letter-spacing: 2px !important;
-
-        color: #fffaf6 !important;
-    }
-
-    #apropos .about-photo-text span {
-        margin-top: 8px !important;
-
-        font-family: var(--sans) !important;
-
-        font-size: 10px !important;
-        font-weight: 400 !important;
-
-        letter-spacing: 2.2px !important;
-
-        text-transform: uppercase !important;
-
-        color: rgba(255,250,246,.92) !important;
-    }
-
-}
-
-/* Pas de texte ajouté sur mobile pour l'instant */
-@media (max-width: 850px) {
-    #apropos .about-photo-text {
-        display: none !important;
-    }
-}
-
-/* À PROPOS - rapprocher SAVOIR-FAIRE de 10 px supplémentaires */
-@media (min-width: 851px) {
-    #apropos {
-        margin-bottom: -21px !important;
     }
 }
