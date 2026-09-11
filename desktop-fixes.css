@@ -14,7 +14,7 @@
 
     #apropos .about-button.site-button {
         position: relative !important;
-        top: 5px !important;
+        top: 12px !important;
     }
 
     #apropos .about-visual {
@@ -388,4 +388,598 @@
             opacity .25s ease,
             visibility 0s linear 0s !important;
     }
+}
+
+
+
+/* À PROPOS - position finale du bouton */
+@media (min-width: 851px) {
+    #apropos .about-content .about-button.site-button {
+    position: relative !important;
+    top: 19px !important;
+}
+}
+
+/* BOUTONS - léger effet de soulèvement au survol */
+.site-button {
+    transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        filter .22s ease !important;
+}
+
+.site-button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 12px 24px rgba(108,68,52,.18) !important;
+    filter: brightness(1.02) !important;
+}
+
+.site-button:active {
+    transform: translateY(0) !important;
+}
+
+/* À PROPOS - effet hover spécifique */
+#apropos .about-content .about-button.site-button {
+    transform: translateY(0) !important;
+    transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        filter .22s ease !important;
+}
+
+#apropos .about-content .about-button.site-button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 12px 24px rgba(108,68,52,.18) !important;
+    filter: brightness(1.02) !important;
+}
+
+#apropos .about-content .about-button.site-button:active {
+    transform: translateY(0) !important;
+}
+
+/* À PROPOS - hover définitif sans conflit transform */
+@media (min-width: 851px) {
+
+    #apropos .about-content .about-button.site-button {
+        position: relative !important;
+        top: 19px !important;
+        transform: none !important;
+
+        transition:
+            top .22s ease,
+            box-shadow .22s ease,
+            filter .22s ease !important;
+    }
+
+    #apropos .about-content .about-button.site-button:hover {
+        top: 17px !important;
+        transform: none !important;
+        box-shadow: 0 12px 24px rgba(108,68,52,.18) !important;
+        filter: brightness(1.02) !important;
+    }
+
+    #apropos .about-content .about-button.site-button:active {
+        top: 19px !important;
+        transform: none !important;
+    }
+}
+
+/* À PROPOS - hover isolé définitif */
+@media (min-width: 851px) {
+
+    #apropos .about-button {
+        position: relative !important;
+        top: 19px !important;
+        transform: none !important;
+        translate: 0 0 !important;
+
+        transition:
+            translate .22s ease,
+            box-shadow .22s ease,
+            filter .22s ease !important;
+    }
+
+    #apropos .about-button:hover {
+        top: 19px !important;
+        transform: none !important;
+        translate: 0 -2px !important;
+        box-shadow: 0 12px 24px rgba(108,68,52,.18) !important;
+        filter: brightness(1.02) !important;
+    }
+
+    #apropos .about-button:active {
+        top: 19px !important;
+        transform: none !important;
+        translate: 0 0 !important;
+    }
+}
+
+/* À PROPOS - hover stable avec conteneur fixe */
+@media (min-width: 851px) {
+
+    #apropos .about-button-hover-zone {
+        position: relative !important;
+        top: 19px !important;
+        display: flex !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
+    #apropos .about-button-hover-zone .about-button.site-button {
+        position: relative !important;
+        top: 0 !important;
+        transform: translateY(0) !important;
+
+        transition:
+            transform .22s ease,
+            box-shadow .22s ease,
+            filter .22s ease !important;
+    }
+
+    #apropos .about-button-hover-zone:hover .about-button.site-button {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 12px 24px rgba(108,68,52,.18) !important;
+        filter: brightness(1.02) !important;
+    }
+
+    #apropos .about-button-hover-zone:active .about-button.site-button {
+        transform: translateY(0) !important;
+    }
+}
+
+/* BOUTONS - effet premium stable sans déplacement */
+.site-button,
+.site-button:hover,
+.site-button:active {
+    transform: none !important;
+    translate: none !important;
+}
+
+.site-button {
+    transition:
+        box-shadow .22s ease,
+        filter .22s ease !important;
+}
+
+.site-button:hover {
+    box-shadow:
+        0 14px 26px rgba(108,68,52,.23) !important;
+    filter: brightness(1.035) !important;
+}
+
+
+/* À PROPOS - neutralisation définitive des anciens hover */
+@media (min-width: 851px) {
+
+    #apropos .about-button-hover-zone {
+        position: relative !important;
+        top: 19px !important;
+        width: max-content !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    #apropos .about-button-hover-zone .about-button.site-button,
+    #apropos .about-button-hover-zone:hover .about-button.site-button,
+    #apropos .about-button-hover-zone:active .about-button.site-button {
+        position: relative !important;
+        top: 0 !important;
+        transform: none !important;
+        translate: none !important;
+    }
+
+    #apropos .about-button-hover-zone:hover .about-button.site-button {
+        box-shadow:
+            0 14px 26px rgba(108,68,52,.23) !important;
+        filter: brightness(1.035) !important;
+    }
+}
+
+/* ==========================================================
+   CORRECTION FINALE - HOVER DES BOUTONS
+========================================================== */
+
+/* Tous les boutons principaux sauf À propos */
+.site-button:not(.about-button) {
+    transform: translateY(0) !important;
+    translate: none !important;
+
+    transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        filter .22s ease !important;
+}
+
+.site-button:not(.about-button):hover {
+    transform: translateY(-2px) !important;
+    translate: none !important;
+
+    box-shadow: 0 14px 26px rgba(108,68,52,.22) !important;
+    filter: brightness(1.03) !important;
+}
+
+.site-button:not(.about-button):active {
+    transform: translateY(0) !important;
+}
+
+
+/* À PROPOS : stable pour éviter le comportement parasite */
+#apropos .about-button.site-button,
+#apropos .about-button.site-button:hover,
+#apropos .about-button.site-button:active {
+    transform: none !important;
+    translate: none !important;
+}
+
+#apropos .about-button.site-button:hover {
+    box-shadow: 0 14px 26px rgba(108,68,52,.22) !important;
+    filter: brightness(1.03) !important;
+}
+
+/* ==========================================================
+   À PROPOS - SOULÈVEMENT STABLE DU BOUTON
+========================================================== */
+@media (min-width: 851px) {
+
+    #apropos .about-button-hover-zone {
+        position: relative !important;
+        top: 19px !important;
+        width: max-content !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        transform: translateY(0) !important;
+        transition: transform .22s ease !important;
+    }
+
+    #apropos .about-button-hover-zone:hover {
+        transform: translateY(-2px) !important;
+    }
+
+    #apropos .about-button-hover-zone .about-button.site-button {
+        position: relative !important;
+        top: 0 !important;
+        transform: none !important;
+        translate: none !important;
+        transition:
+            box-shadow .22s ease,
+            filter .22s ease !important;
+    }
+
+    #apropos .about-button-hover-zone:hover .about-button.site-button {
+        box-shadow: 0 14px 26px rgba(108,68,52,.22) !important;
+        filter: brightness(1.03) !important;
+    }
+
+    #apropos .about-button-hover-zone:active {
+        transform: translateY(0) !important;
+    }
+}
+
+/* ==========================================================
+   BOUTONS - AUCUN SOULÈVEMENT
+========================================================== */
+
+.site-button,
+.site-button:hover,
+.site-button:active {
+    transform: none !important;
+    translate: none !important;
+}
+
+.site-button {
+    transition:
+        box-shadow .22s ease,
+        filter .22s ease !important;
+}
+
+.site-button:hover {
+    box-shadow: 0 12px 24px rgba(108,68,52,.18) !important;
+    filter: brightness(1.025) !important;
+}
+
+/* À PROPOS - neutraliser aussi le conteneur ajouté */
+#apropos .about-button-hover-zone,
+#apropos .about-button-hover-zone:hover,
+#apropos .about-button-hover-zone:active {
+    transform: none !important;
+    translate: none !important;
+}
+
+#apropos .about-button-hover-zone .about-button.site-button,
+#apropos .about-button-hover-zone:hover .about-button.site-button,
+#apropos .about-button-hover-zone:active .about-button.site-button {
+    transform: none !important;
+    translate: none !important;
+}
+
+/* ==========================================================
+   BOUTONS - AUCUN SOULÈVEMENT
+========================================================== */
+
+.site-button,
+.site-button:hover,
+.site-button:active {
+    transform: none !important;
+    translate: none !important;
+}
+
+.site-button {
+    transition:
+        box-shadow .22s ease,
+        filter .22s ease !important;
+}
+
+.site-button:hover {
+    box-shadow: 0 12px 24px rgba(108,68,52,.18) !important;
+    filter: brightness(1.025) !important;
+}
+
+/* À PROPOS - neutraliser aussi le conteneur ajouté */
+#apropos .about-button-hover-zone,
+#apropos .about-button-hover-zone:hover,
+#apropos .about-button-hover-zone:active {
+    transform: none !important;
+    translate: none !important;
+}
+
+#apropos .about-button-hover-zone .about-button.site-button,
+#apropos .about-button-hover-zone:hover .about-button.site-button,
+#apropos .about-button-hover-zone:active .about-button.site-button {
+    transform: none !important;
+    translate: none !important;
+}
+
+/* ==========================================================
+   VERROUILLAGE FINAL - AUCUN MOUVEMENT DES BOUTONS
+========================================================== */
+
+/* HERO */
+#accueil .hero-button.site-button,
+#accueil .hero-button.site-button:hover,
+#accueil .hero-button.site-button:active {
+    transform: none !important;
+    translate: none !important;
+}
+
+/* À PROPOS */
+#apropos .about-button.site-button,
+#apropos .about-button.site-button:hover,
+#apropos .about-button.site-button:active {
+    transform: none !important;
+    translate: none !important;
+}
+
+/* SAVOIR-FAIRE */
+#savoir-faire .skills-button.site-button,
+#savoir-faire .skills-button.site-button:hover,
+#savoir-faire .skills-button.site-button:active {
+    transform: none !important;
+    translate: none !important;
+}
+
+/* Conteneur du bouton À propos */
+#apropos .about-button-hover-zone,
+#apropos .about-button-hover-zone:hover,
+#apropos .about-button-hover-zone:active {
+    transform: none !important;
+    translate: none !important;
+}
+
+/* Aucun mouvement animé */
+#accueil .site-button,
+#apropos .site-button,
+#savoir-faire .site-button {
+    transition:
+        box-shadow .22s ease,
+        filter .22s ease !important;
+}
+
+/* Hover uniquement visuel */
+#accueil .site-button:hover,
+#apropos .site-button:hover,
+#savoir-faire .site-button:hover {
+    box-shadow: 0 12px 24px rgba(108,68,52,.18) !important;
+    filter: brightness(1.025) !important;
+}
+
+/* ==========================================================
+   À PROPOS - VERROUILLAGE ABSOLU SANS SOULÈVEMENT
+========================================================== */
+@media (min-width: 851px) {
+
+    #apropos .about-content .about-button-hover-zone,
+    #apropos .about-content .about-button-hover-zone:hover,
+    #apropos .about-content .about-button-hover-zone:active {
+        position: relative !important;
+        top: 19px !important;
+        transform: none !important;
+        translate: none !important;
+    }
+
+    #apropos .about-content .about-button-hover-zone .about-button.site-button,
+    #apropos .about-content .about-button-hover-zone .about-button.site-button:hover,
+    #apropos .about-content .about-button-hover-zone .about-button.site-button:active {
+        position: relative !important;
+        top: 0 !important;
+        transform: none !important;
+        translate: none !important;
+    }
+}
+
+/* ==========================================================
+   BOUTONS - HOVER TOTALEMENT NEUTRALISÉ
+========================================================== */
+
+#accueil .site-button,
+#accueil .site-button:hover,
+#accueil .site-button:active,
+
+#apropos .site-button,
+#apropos .site-button:hover,
+#apropos .site-button:active,
+
+#savoir-faire .site-button,
+#savoir-faire .site-button:hover,
+#savoir-faire .site-button:active {
+    transform: none !important;
+    translate: none !important;
+    filter: none !important;
+
+    box-shadow:
+        0 7px 18px rgba(108,68,52,.13) !important;
+
+    transition: none !important;
+}
+
+
+/* Bouton À propos : verrouillage du conteneur */
+#apropos .about-button-hover-zone,
+#apropos .about-button-hover-zone:hover,
+#apropos .about-button-hover-zone:active {
+    position: relative !important;
+    top: 19px !important;
+    transform: none !important;
+    translate: none !important;
+    transition: none !important;
+}
+
+
+/* Bouton À propos lui-même */
+#apropos .about-button-hover-zone .about-button.site-button,
+#apropos .about-button-hover-zone .about-button.site-button:hover,
+#apropos .about-button-hover-zone .about-button.site-button:active {
+    position: relative !important;
+    top: 0 !important;
+    transform: none !important;
+    translate: none !important;
+    filter: none !important;
+
+    box-shadow:
+        0 7px 18px rgba(108,68,52,.13) !important;
+
+    transition: none !important;
+}
+
+/* ==========================================================
+   À PROPOS - BOUTON DÉFINITIVEMENT FIXE
+========================================================== */
+
+@media (min-width: 851px) {
+
+    #apropos .about-content .about-button.site-button,
+    #apropos .about-content .about-button.site-button:hover,
+    #apropos .about-content .about-button.site-button:active,
+    #apropos .about-content .about-button.site-button:focus {
+
+        position: relative !important;
+        top: 19px !important;
+
+        transform: none !important;
+        translate: none !important;
+        scale: none !important;
+
+        filter: none !important;
+        opacity: 1 !important;
+
+        background:
+            linear-gradient(
+                135deg,
+                #d9b6a0 0%,
+                #c99c84 48%,
+                #b98771 100%
+            ) !important;
+
+        border: 1px solid #b98771 !important;
+
+        box-shadow:
+            0 7px 18px rgba(108,68,52,.13) !important;
+
+        transition: none !important;
+    }
+
+    #apropos .about-content .about-button.site-button span,
+    #apropos .about-content .about-button.site-button:hover span,
+    #apropos .about-content .about-button.site-button:active span {
+        transform: none !important;
+        translate: none !important;
+        transition: none !important;
+    }
+}
+
+/* ==========================================================
+   À PROPOS - ZONE CLIQUABLE SUR TOUT LE BOUTON
+========================================================== */
+
+#apropos .about-content .about-button.site-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 315px !important;
+    min-width: 315px !important;
+    max-width: 315px !important;
+
+    height: 46px !important;
+    min-height: 46px !important;
+
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+
+    cursor: pointer !important;
+    pointer-events: auto !important;
+
+    text-decoration: none !important;
+}
+
+#apropos .about-content .about-button.site-button span {
+    pointer-events: none !important;
+}
+
+/* ==========================================================
+   À PROPOS - ZONE CLIQUABLE CORRIGÉE
+========================================================== */
+
+#apropos .about-content {
+    position: relative !important;
+}
+
+#apropos .about-content .about-button.site-button {
+    position: relative !important;
+    top: 19px !important;
+
+    display: flex !important;
+    width: 315px !important;
+    height: 46px !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    box-sizing: border-box !important;
+
+    z-index: 50 !important;
+
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+/* Aucun élément décoratif ne doit intercepter la souris */
+#apropos .about-ornament-zone,
+#apropos .about-ornament-zone *,
+#apropos .about-ornament-zone::before,
+#apropos .about-ornament-zone::after,
+#apropos .about-ornament-ref,
+#apropos .about-ornament-ref::before,
+#apropos .about-ornament-ref::after,
+#apropos .about-divider,
+#apropos .about-divider::before,
+#apropos .about-divider::after {
+    pointer-events: none !important;
+}
+
+/* Le texte et la flèche laissent le clic à l'ancre */
+#apropos .about-button.site-button *,
+#apropos .about-button.site-button::before,
+#apropos .about-button.site-button::after {
+    pointer-events: none !important;
 }
