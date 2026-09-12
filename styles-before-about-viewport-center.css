@@ -30,9 +30,9 @@ em{font-weight:400}
 .hero-mark{width:540px;right:-90px;top:22%}
 .section{position:relative;overflow:hidden;padding:155px 0;scroll-margin-top:var(--head)}
 .split,.price-layout{position:relative;z-index:1;width:var(--page);margin:auto;display:grid;align-items:center}
-.about{background:var(--ivory)}.about-watermark{position:absolute;z-index:0;width:360px;height:auto;left:-90px;bottom:-70px;opacity:.07;object-fit:contain;pointer-events:none;filter:blur(.2px);transform:rotate(-8deg)}
+.about{background:var(--ivory)}
 .about-grid{grid-template-columns:.82fr 1.18fr;gap:12vw}
-.about-copy{max-width:460px;margin:0;align-self:center}
+.about-copy{max-width:460px;margin-bottom:0;align-self:center}
 .section h2{font-size:clamp(52px,5.8vw,82px)}
 .about-copy>p:not(.kicker),.salon-copy>p:not(.kicker){max-width:410px;margin:33px 0;color:#76594c;font:400 20px/1.6 var(--serif)}
 .text-link{display:inline-flex;gap:18px;padding-bottom:7px;border-bottom:1px solid var(--rose);color:var(--ink);font-size:9px;font-weight:600;letter-spacing:1.8px;text-transform:uppercase}
@@ -59,7 +59,7 @@ em{font-weight:400}
 .salon-grid{grid-template-columns:1.15fr .85fr;gap:12vw}
 .salon-photo{height:620px}
 .small-caption{inset:28% 14%;padding:0;border-radius:var(--glass-radius);font:500 32px/1 var(--serif)}
-.salon-copy{margin-top:0;align-self:center}
+.salon-copy{margin-top:100px}
 .mirror{width:300px;right:-40px;top:50px}
 .gallery{background:var(--ivory);padding-bottom:175px}
 .gallery-head{width:var(--page);margin:0 auto 75px;padding-left:16vw}
@@ -119,8 +119,8 @@ footer nav{display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:9px;let
 .comb{height:470px;right:-50px;opacity:.045}
 .center{margin-top:48px}
 .salon-grid{grid-template-columns:1fr}
-.salon-photo{height:500px;order:2}
-.salon-copy{margin-top:0;order:1}
+.salon-photo{height:500px}
+.salon-copy{margin-top:0}
 .mirror{width:180px;opacity:.045}
 .gallery{padding-bottom:110px}
 .gallery-head{margin-bottom:45px;padding-left:0}
