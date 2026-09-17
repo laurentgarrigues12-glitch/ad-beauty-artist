@@ -18,7 +18,7 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 .hero-shade{background:linear-gradient(105deg,rgba(48,28,22,.25),rgba(247,221,207,.03) 55%,rgba(75,45,34,.2))}
 .hero-glass{position:relative;z-index:2;width:min(780px,calc(100% - 48px));padding:33px 80px 33px;background:rgba(251,247,241,.14);border:1px solid rgba(200,170,134,.25);border-radius:var(--image-radius);box-shadow:0 12px 30px rgba(81,53,42,.12);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);text-align:center;transform:translateY(calc(var(--head) / 2))}
 .kicker{margin:0 0 20px;color:var(--rose);font-size:10px;font-weight:600;letter-spacing:4px;text-transform:uppercase}
-.hero .kicker{color:#fff1e9}
+.hero .kicker{color:#fff1e9;margin-bottom:10px;font-size:8px;letter-spacing:2.5px}
 .hero h1,.section h2{margin:0;color:var(--ink);font:500 clamp(58px,7vw,106px)/.82 var(--serif)}
 em{font-weight:400}
 .hero h1{color:#fffaf5;font-size:clamp(50px,6vw,88px)}
@@ -75,7 +75,7 @@ em{font-weight:400}
     width:622px;
     height:auto;
     right:-115px;
-    top:-14px;
+    top:-43px;
     opacity:.20;
     pointer-events:none;
     object-fit:contain;
@@ -315,8 +315,8 @@ footer nav{display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:9px;let
 .site-header nav{position:fixed;top:var(--head);right:0;left:0;display:flex;padding:17px 25px 25px;flex-direction:column;gap:0;background:rgba(251,247,241,.98);border-bottom:1px solid rgba(166,110,89,.2);transform:translateY(-115%);visibility:hidden;opacity:0;pointer-events:none;transition:transform .28s,opacity .2s}
 .site-header nav.open{transform:translateY(0);visibility:visible;opacity:1;pointer-events:auto}
 .site-header nav a{padding:13px 0;border-bottom:1px solid #eadbd0;font:400 23px var(--serif);letter-spacing:0;text-transform:none}
-.hero-glass{width:calc(100% - 100px);padding:0}
-.hero h1{font-size:55px}
+.hero-glass{width:calc(100% - 118px);padding:22px 19px 20px}
+.hero h1{font-size:44px;line-height:.9}.hero-copy{margin:19px auto 21px;font-size:17px;line-height:1.2}.hero .button{min-height:45px;padding:12px 19px;font-size:9px}
 .hero-mark{width:350px;right:-140px}
 .section{padding:105px 0}
 .split,.price-layout{grid-template-columns:1fr;gap:55px}
@@ -357,6 +357,13 @@ footer nav{justify-items:center}
 .detail{grid-template-columns:1fr;padding:90px 0;gap:45px}
 .detail figure{height:410px}
 }
+
+
+
+
+
+
+
 
 
 
