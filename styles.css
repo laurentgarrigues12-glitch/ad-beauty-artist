@@ -74,8 +74,8 @@ em{font-weight:400}
     z-index:0;
     width:622px;
     height:auto;
-    right:-30px;
-    top:-11px;
+    right:-115px;
+    top:-14px;
     opacity:.20;
     pointer-events:none;
     object-fit:contain;
@@ -121,60 +121,7 @@ em{font-weight:400}
     transform: rotate(-8.5deg);
 }
 
-@media(max-width:850px){
-    .prices-watermark-right{display:none}
-:root{--head:75px;--page:min(100% - 38px,650px)}
-.site-header{padding:0 19px;right:auto;width:100dvw}
-.brand b{font-size:33px}
-.brand span{font-size:17px}
-.brand small{font-size:5px}
-.menu-toggle{display:grid;gap:6px;padding:10px;border:0;background:transparent;position:absolute;right:19px;top:50%;transform:translateY(-50%)}
-.menu-toggle i{display:block;width:25px;height:1px;background:var(--ink)}
-.site-header nav{position:fixed;top:var(--head);right:0;left:0;display:flex;padding:17px 25px 25px;flex-direction:column;gap:0;background:rgba(251,247,241,.98);border-bottom:1px solid rgba(166,110,89,.2);transform:translateY(-115%);visibility:hidden;opacity:0;pointer-events:none;transition:transform .28s,opacity .2s}
-.site-header nav.open{transform:translateY(0);visibility:visible;opacity:1;pointer-events:auto}
-.site-header nav a{padding:13px 0;border-bottom:1px solid #eadbd0;font:400 23px var(--serif);letter-spacing:0;text-transform:none}
-.hero-glass{width:calc(100% - 34px);padding:44px 22px}
-.hero h1{font-size:55px}
-.hero-mark{width:350px;right:-140px}
-.section{padding:105px 0}
-.split,.price-layout{grid-template-columns:1fr;gap:55px}
-.about-copy{margin:0}
-.about-photo{height:520px}
-.section h2{font-size:50px}
-.about-copy>p:not(.kicker),.salon-copy>p:not(.kicker){font-size:18px}
-.scissors{width:230px;left:-100px}
-.about-mark{display:none}
-.section-head{margin-bottom:48px;padding-left:0}
-.craft-grid{grid-template-columns:1fr;gap:48px}
-.craft-grid article:nth-child(2){margin-top:0}
-.craft-grid figure{height:400px}
-.comb{height:470px;right:-50px;opacity:.045}
-.center{margin-top:48px}
-.salon-grid{grid-template-columns:1fr}
-.salon-photo{height:500px;order:2}
-.salon-copy{margin-top:0;order:1}
-.mirror{width:180px;opacity:.045}
-.gallery{padding-bottom:110px}
-.gallery-head{margin-bottom:45px;padding-left:0}
-.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:240px 240px 240px;gap:12px}
 
-.price-list{margin-top:0}
-.prices header .button{margin-top:18px}
-.pins{width:220px;opacity:.045}
-.contact{min-height:570px;position:relative}
-.contact-actions{flex-direction:column;gap:23px}
-footer{grid-template-columns:1fr;padding:46px 25px;text-align:center}
-footer nav{justify-items:center}
-.footer-meta{justify-content:center}
-.footer-meta small{text-align:center}
-
-    .gallery-watermark-left{display:none}
-    
-    .page-hero{min-height:46svh}
-.page-hero h1{font-size:61px}
-.detail{grid-template-columns:1fr;padding:90px 0;gap:45px}
-.detail figure{height:410px}
-}
 .section-head{position:relative;z-index:1;width:var(--page);margin:0 auto 80px;padding-left:12vw}
 .section-head>p:last-child{max-width:350px;margin:26px 0 0;color:#76594c;font:400 19px/1.5 var(--serif)}
 .craft-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr .85fr 1fr;gap:4.5vw;width:var(--page);margin:auto}
@@ -355,4 +302,65 @@ footer nav{display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:9px;let
 .detail-list{padding:10px 0}
 .detail-list p{display:flex;justify-content:space-between;padding:15px 0;border-top:1px solid rgba(166,110,89,.3);font:400 18px var(--serif)}
 .detail-list strong{font:500 21px var(--serif)}
+
+@media(max-width:850px){
+    .prices-watermark-right{display:none}
+:root{--head:75px;--page:min(100% - 38px,650px)}
+.site-header{padding:0 19px;right:auto;width:100dvw}
+.brand b{font-size:33px}
+.brand span{font-size:17px}
+.brand small{font-size:5px}
+.menu-toggle{display:grid;gap:6px;padding:10px;border:0;background:transparent;position:absolute;right:19px;top:50%;transform:translateY(-50%)}
+.menu-toggle i{display:block;width:25px;height:1px;background:var(--ink)}
+.site-header nav{position:fixed;top:var(--head);right:0;left:0;display:flex;padding:17px 25px 25px;flex-direction:column;gap:0;background:rgba(251,247,241,.98);border-bottom:1px solid rgba(166,110,89,.2);transform:translateY(-115%);visibility:hidden;opacity:0;pointer-events:none;transition:transform .28s,opacity .2s}
+.site-header nav.open{transform:translateY(0);visibility:visible;opacity:1;pointer-events:auto}
+.site-header nav a{padding:13px 0;border-bottom:1px solid #eadbd0;font:400 23px var(--serif);letter-spacing:0;text-transform:none}
+.hero-glass{width:calc(100% - 100px);padding:0}
+.hero h1{font-size:55px}
+.hero-mark{width:350px;right:-140px}
+.section{padding:105px 0}
+.split,.price-layout{grid-template-columns:1fr;gap:55px}
+.about-copy{margin:0}
+.about-photo{height:520px}
+.section h2{font-size:50px}
+.about-copy>p:not(.kicker),.salon-copy>p:not(.kicker){font-size:18px}
+.scissors{width:230px;left:-100px}
+.about-mark{display:none}.filigrane-artiste-left{width:442px;left:-15px;top:-19px;opacity:.20}
+.section-head{margin-bottom:48px;padding-left:0}
+.craft-grid{grid-template-columns:1fr;gap:38px}
+.craft-grid article:nth-child(2){margin-top:0}
+.craft-grid figure{height:400px}
+.comb{height:470px;right:-50px;opacity:.045}
+.center{margin-top:38px}
+.salon-grid{grid-template-columns:1fr}
+.salon-photo{height:500px;order:2}
+.salon-copy{margin-top:0;order:1}
+.mirror{width:180px;opacity:.045}
+.gallery{padding-bottom:110px}
+.gallery-head{margin-bottom:45px;padding-left:0}
+.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:240px 240px 240px;gap:12px}
+
+.price-list{margin-top:0}
+.prices header .button{margin-top:18px}
+.pins{width:220px;opacity:.045}
+.contact{min-height:570px;position:relative}
+.contact-actions{flex-direction:column;gap:23px}
+footer{grid-template-columns:1fr;padding:46px 25px;text-align:center}
+footer nav{justify-items:center}
+.footer-meta{justify-content:center}
+.footer-meta small{text-align:center}
+
+    .gallery-watermark-left{display:none}
+    
+    .page-hero{min-height:46svh}
+.page-hero h1{font-size:61px}
+.detail{grid-template-columns:1fr;padding:90px 0;gap:45px}
+.detail figure{height:410px}
+}
+
+
+
+
+
+
 
