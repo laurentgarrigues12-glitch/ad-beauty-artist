@@ -471,3 +471,18 @@ main > section{
 .section-logo-1{
     display:none;
 }
+
+
+
+
+
+.section-logo,
+.section-logo-1,
+.section-logo-2,
+.section-logo-3,
+.section-logo-4,
+.section-logo-5,
+.section-logo-6,
+.section-logo-7{
+    width:130px !important;
+}
