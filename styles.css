@@ -425,3 +425,15 @@ main > section{
         margin-right:auto;
     }
 }
+
+
+.section-logo-4{
+    position:absolute;
+    z-index:5;
+    width:140px;
+    height:auto;
+    right:14px;
+    top:1006px;
+    bottom:auto;
+    opacity:.60;
+}
