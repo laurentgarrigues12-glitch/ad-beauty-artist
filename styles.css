@@ -486,3 +486,12 @@ main > section{
 .section-logo-7{
     width:130px !important;
 }
+
+.filigrane-artiste-left,
+.craft-watermark-right,
+.salon-watermark-right,
+.gallery-watermark-left,
+.prices-watermark-right,
+.contact-watermark-left{
+    opacity:.19 !important;
+}
