@@ -69,9 +69,205 @@
     filter: drop-shadow(0 0 6px rgba(231,189,134,.5));
 }
 </style>
+<style id="logo-cadre-premium">
+.brand-premium {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+}
+
+.brand-premium .premium-logo-circle {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    border: 1.5px solid #c99570;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 12px rgba(201,149,112,.12);
+}
+
+.brand-premium .premium-logo-circle::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border: 1px solid rgba(225,174,132,.28);
+    border-radius: 50%;
+}
+
+.brand-premium .monogram {
+    font-family: Georgia, serif;
+    font-size: 31px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -5px;
+    line-height: 1;
+    padding-right: 5px;
+    background: linear-gradient(135deg,#ffe1bf,#c78a62 55%,#f4c69d);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.brand-premium .premium-brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.brand-premium .premium-brand-text strong {
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    color: #e5ae87;
+}
+
+.brand-premium .premium-brand-text small {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    white-space: nowrap;
+    color: #f0e3d8;
+}
+
+.brand-premium .premium-brand-text small::before,
+.brand-premium .premium-brand-text small::after {
+    content: "";
+    width: 17px;
+    height: 1px;
+    background: #c99570;
+    flex-shrink: 0;
+}
+
+@media (max-width: 780px) {
+    .brand-premium {
+        gap: 8px;
+    }
+
+    .brand-premium .premium-logo-circle {
+        width: 46px;
+        height: 46px;
+    }
+
+    .brand-premium .monogram {
+        font-size: 23px;
+    }
+
+    .brand-premium .premium-brand-text strong {
+        font-size: 15px;
+        letter-spacing: .5px;
+    }
+
+    .brand-premium .premium-brand-text small {
+        font-size: 7px;
+        letter-spacing: 1px;
+        gap: 4px;
+    }
+
+    .brand-premium .premium-brand-text small::before,
+    .brand-premium .premium-brand-text small::after {
+        width: 8px;
+    }
+}
+</style>
+<style id="logo-premium-retouche">
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap');
+
+@media (min-width: 781px) {
+    .brand-premium {
+        gap: 18px;
+    }
+
+    .brand-premium .premium-logo-circle {
+        width: 70px;
+        height: 70px;
+        border: 1px solid #d8a47c;
+        box-shadow: 0 0 14px rgba(201,149,112,.12);
+    }
+
+    .brand-premium .premium-logo-circle::after {
+        inset: 5px;
+        border-color: rgba(225,174,132,.35);
+    }
+
+    .brand-premium .monogram {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 43px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: -5px;
+        padding-right: 5px;
+    }
+
+    .brand-premium .premium-brand-text strong {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 29px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        line-height: 1;
+        background: linear-gradient(110deg,#f9d6b6,#bd7852 55%,#f2bc95);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .brand-premium .premium-brand-text small {
+        font-size: 9px;
+        letter-spacing: 3px;
+        color: #eee1d6;
+    }
+
+    .brand-premium .premium-brand-text small::before,
+    .brand-premium .premium-brand-text small::after {
+        width: 25px;
+    }
+}
+</style>
+<style id="logo-harmonise">.brand-premium .premium-logo-circle{border-color:#c69a67;box-shadow:none}.brand-premium .premium-logo-circle::after{border-color:rgba(198,154,103,.35)}.brand-premium .monogram{background:none!important;-webkit-text-fill-color:#c69a67!important;color:#c69a67!important}.brand-premium .premium-brand-text strong{background:none!important;-webkit-text-fill-color:#d9b08a!important;color:#d9b08a!important}.brand-premium .premium-brand-text small::before,.brand-premium .premium-brand-text small::after{background:#c69a67}</style>
+<style id="logo-cercle-simple">.brand-premium .premium-logo-circle::after{content:none!important;display:none!important}</style>
+<style id="harmonisation-cuivre">
+:root {
+    --copper: #D39162;
+    --copper2: #D39162;
+}
+
+.brand-premium .premium-logo-circle {
+    border-color: #D39162 !important;
+}
+
+.brand-premium .monogram,
+.brand-premium .premium-brand-text strong {
+    background: none !important;
+    -webkit-text-fill-color: #D39162 !important;
+    color: #D39162 !important;
+}
+
+.brand-premium .premium-brand-text small::before,
+.brand-premium .premium-brand-text small::after {
+    background: #D39162 !important;
+}
+
+.links .premium-icon,
+.links .premium-svg,
+.links a:hover .premium-icon,
+.links a:hover .premium-label {
+    color: #D39162 !important;
+}
+
+.links a:hover .premium-svg {
+    filter: none !important;
+}
+</style>
 </head>
 <body>
-<header class="header"><nav class="nav container" aria-label="Navigation principale"><a class="brand" href="#accueil"><span class="monogram">AD</span><span><strong>BEAUTY ARTIST</strong><small>COIFFURE FÉMININE</small></span></a><button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button><div class="links" id="navigation"><a href="#accueil"><span class="premium-icon" aria-hidden="true"><svg class="premium-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7"/><path d="M5 9v12h14V9"/><path d="M9 21v-8h6v8"/></svg></span><span class="premium-label">Accueil</span></a><a href="#salon"><span class="premium-icon" aria-hidden="true"><svg class="premium-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.1 8.1 21 21M14 10l7-7M8.1 15.9 11 13"/></svg></span><span class="premium-label">Le salon</span></a><a href="#prestations"><span class="premium-icon" aria-hidden="true"><svg class="premium-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2Z"/><path d="m19 2 .7 2.3L22 5l-2.3.7L19 8l-.7-2.3L16 5l2.3-.7L19 2Z"/></svg></span><span class="premium-label">Prestations et tarifs</span></a><a href="#galerie"><span class="premium-icon" aria-hidden="true"><svg class="premium-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></span><span class="premium-label">Galerie</span></a><a href="#apropos"><span class="premium-icon" aria-hidden="true"><svg class="premium-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg></span><span class="premium-label">À propos</span></a><a href="#contact"><span class="premium-icon" aria-hidden="true"><svg class="premium-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m3 7 9 7 9-7"/></svg></span><span class="premium-label">Contact et horaires</span></a></div></nav></header>
+<header class="header"><nav class="nav container" aria-label="Navigation principale"><a class="brand brand-premium" href="#accueil"><span class="premium-logo-circle"><span class="monogram">AD</span></span><span class="premium-brand-text"><strong>BEAUTY ARTIST</strong><small><span>COIFFURE FÉMININE</span></small></span></a><button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button><div class="links" id="navigation"><a href="#accueil"><span class="premium-icon" aria-hidden="true"><svg class="premium-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7"/><path d="M5 9v12h14V9"/><path d="M9 21v-8h6v8"/></svg></span><span class="premium-label">Accueil</span></a><a href="#salon"><span class="premium-icon" aria-hidden="true"><svg class="premium-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.1 8.1 21 21M14 10l7-7M8.1 15.9 11 13"/></svg></span><span class="premium-label">Le salon</span></a><a href="#prestations"><span class="premium-icon" aria-hidden="true"><svg class="premium-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2Z"/><path d="m19 2 .7 2.3L22 5l-2.3.7L19 8l-.7-2.3L16 5l2.3-.7L19 2Z"/></svg></span><span class="premium-label">Prestations et tarifs</span></a><a href="#galerie"><span class="premium-icon" aria-hidden="true"><svg class="premium-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></span><span class="premium-label">Galerie</span></a><a href="#apropos"><span class="premium-icon" aria-hidden="true"><svg class="premium-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg></span><span class="premium-label">À propos</span></a><a href="#contact"><span class="premium-icon" aria-hidden="true"><svg class="premium-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m3 7 9 7 9-7"/></svg></span><span class="premium-label">Contact et horaires</span></a></div></nav></header>
 <main>
 <section class="hero" id="accueil"><div class="container hero-inner"><div class="eyebrow">Coiffure féminine</div><h1>AD BEAUTY<br><span>ARTIST</span></h1><h2>VOTRE STYLE,<br>NOTRE EXPERTISE</h2><div class="rule"></div><p>Un salon de coiffure à l'écoute de vos envies, pour révéler la beauté qui vous ressemble.</p><a class="cta" href="#" id="planity">▦ &nbsp; Prendre rendez-vous <span aria-hidden="true">→</span></a></div></section>
 <section class="services" id="prestations" aria-label="Prestations et tarifs"><div class="container service-grid"><div class="service"><div class="symbol">✂</div><h3>COUPE & BRUSHING</h3><p>Un style qui vous sublime</p></div><div class="service"><div class="symbol">◉</div><h3>COLORATION</h3><p>Des couleurs qui révèlent votre personnalité</p></div><div class="service"><div class="symbol">❀</div><h3>SOINS CAPILLAIRES</h3><p>Des cheveux en pleine santé</p></div><div class="service"><div class="symbol">♧</div><h3>MÈCHES & BALAYAGE</h3><p>Des reflets naturels et lumineux</p></div></div></section>
@@ -88,5 +284,11 @@ const toggle=document.querySelector('.menu-toggle'),links=document.querySelector
 const PLANITY_URL='';document.getElementById('planity').addEventListener('click',e=>{if(PLANITY_URL){e.currentTarget.href=PLANITY_URL;return}e.preventDefault();const n=document.getElementById('notice');n.classList.add('show');setTimeout(()=>n.classList.remove('show'),4000)});
 </script>
 </body></html>
+
+
+
+
+
+
 
 
