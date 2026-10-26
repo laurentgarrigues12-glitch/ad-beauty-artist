@@ -1354,6 +1354,167 @@ h6 {
 }
 </style>
 
+
+<style id="ajustement-hauteur-accueil-mobile">
+/* Remonter le contenu de l'accueil uniquement sur mobile */
+@media (max-width: 780px) {
+    #accueil .hero-inner {
+        transform: translateY(-30px);
+    }
+}
+</style>
+
+
+<style id="remontee-intro-prestations-mobile">
+/* Remonter uniquement l'introduction des prestations sur mobile */
+@media (max-width: 780px) {
+    #prestations .prestations-intro {
+        transform: translateY(-15px);
+    }
+}
+</style>
+
+
+<style id="remontee-cartes-prestations-mobile">
+/* Remonter les cartes de prestations de 5 pixels sur mobile */
+@media (max-width: 780px) {
+    #prestations .prestations-grid {
+        position: relative;
+        top: -10px;
+    }
+}
+</style>
+
+
+<style id="ajustement-trait-philosophie-mobile">
+/* Rapprocher le trait cuivre du titre Ma philosophie */
+@media (max-width: 780px) {
+    #salon .feature-copy > .rule {
+        margin-top: 12px !important;
+        margin-bottom: 32px !important;
+    }
+}
+</style>
+
+
+<style id="espacement-trait-galerie-mobile">
+/* Meme espacement sous le titre que dans Ma philosophie */
+@media (max-width: 780px) {
+    #galerie .gallery-top .rule {
+        margin-top: 12px !important;
+    }
+}
+</style>
+
+
+<style id="harmonisation-traits-accueil-mobile">
+/* Espacement identique au trait de la page d'accueil */
+@media (max-width: 780px) {
+
+    #salon .feature-copy > .rule {
+        margin-top: 10px !important;
+        margin-bottom: 34px !important;
+    }
+
+    #galerie .gallery-top .rule {
+        margin-top: 22px !important;
+        margin-bottom: 0 !important;
+    }
+
+    #apropos .rule {
+        margin-top: 22px !important;
+        margin-bottom: 22px !important;
+    }
+
+}
+</style>
+
+
+<style id="alignement-exact-traits-mobile">
+/* Ajustement des traits sur mobile */
+@media (max-width: 780px) {
+    #salon .feature-copy > .rule,
+    #galerie .gallery-top .rule,
+    #apropos .rule {
+        position: relative;
+    }
+}
+</style>
+
+
+<style id="espacement-icone-philosophie-45px">
+/* 45 px entre le bas de la photo et le haut de l'icone */
+@media (max-width: 780px) {
+    #salon .feature-copy {
+        padding-top: 45px !important;
+    }
+
+    #salon .feature-copy > .ad-kit-icon {
+        margin-top: 0 !important;
+    }
+}
+</style>
+
+
+<style id="espacement-icone-galerie-45px">
+/* 45 px entre le haut de la galerie et le haut de l'icone */
+@media (max-width: 780px) {
+    #galerie {
+        padding-top: 45px !important;
+    }
+
+    #galerie .gallery-top > div > .ad-kit-icon {
+        margin-top: 0 !important;
+    }
+}
+</style>
+
+
+<style id="espacement-icone-apropos-45px">
+/* 45 px entre le haut de la section et le haut de l'icone coeur */
+@media (max-width: 780px) {
+    #apropos {
+        padding-top: 45px !important;
+    }
+
+    #apropos .container > div > .ad-kit-icon {
+        margin-top: 0 !important;
+    }
+}
+</style>
+
+
+<style id="espacement-trait-texte-philosophie-mobile">
+/* Rapprocher le premier paragraphe du trait cuivre */
+@media (max-width: 780px) {
+    #salon .feature-copy > .rule {
+        margin-bottom: 24px !important;
+    }
+}
+</style>
+
+
+<style id="remontee-intro-prestations-ordinateur">
+/* Remonter uniquement l'introduction des prestations sur ordinateur */
+@media (min-width: 781px) {
+    #prestations .prestations-intro {
+        position: relative;
+        top: -25px;
+    }
+}
+</style>
+
+
+<style id="remontee-cartes-prestations-ordinateur">
+/* Remonter les cartes de 5 pixels uniquement sur ordinateur */
+@media (min-width: 781px) {
+    #prestations .prestations-grid {
+        position: relative;
+        top: -5px;
+    }
+}
+</style>
+
 </head>
 <body>
 <header class="header"><nav class="nav container" aria-label="Navigation principale"><a class="brand brand-premium" href="#accueil"><span class="premium-logo-circle"><span class="monogram">AD</span></span><span class="premium-brand-text"><strong>BEAUTY ARTIST</strong><small><span>COIFFURE FÉMININE</span></small></span></a><button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button><div class="links" id="navigation"><a href="#accueil"><span class="premium-icon" aria-hidden="true"><svg class="premium-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7"/><path d="M5 9v12h14V9"/><path d="M9 21v-8h6v8"/></svg></span><span class="premium-label">Accueil</span></a><a href="#prestations"><span class="premium-icon" aria-hidden="true"><svg class="premium-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2Z"/><path d="m19 2 .7 2.3L22 5l-2.3.7L19 8l-.7-2.3L16 5l2.3-.7L19 2Z"/></svg></span><span class="premium-label">Prestations et tarifs</span></a>
@@ -2213,7 +2374,213 @@ const PLANITY_URL='';document.getElementById('planity').addEventListener('click'
 })();
 </script>
 
+
+<script id="mesure-alignement-traits-mobile">
+(function () {
+    function alignerTraits() {
+        if (!window.matchMedia("(max-width: 780px)").matches) {
+            return;
+        }
+
+        const sections = [
+            ["#salon h2", "#salon .feature-copy > .rule"],
+            ["#galerie h2", "#galerie .gallery-top .rule"],
+            ["#apropos h2", "#apropos .rule"]
+        ];
+
+        sections.forEach(function (selecteurs) {
+            const titre = document.querySelector(selecteurs[0]);
+            const trait = document.querySelector(selecteurs[1]);
+
+            if (!titre || !trait) return;
+
+            trait.style.top = "0px";
+
+            const distance =
+                trait.getBoundingClientRect().top -
+                titre.getBoundingClientRect().bottom;
+
+            const correction = 22 - distance;
+
+            trait.style.top = correction + "px";
+        });
+    }
+
+    window.addEventListener("load", alignerTraits);
+    window.addEventListener("resize", alignerTraits);
+})();
+</script>
+
+
+<script id="alignement-lien-galerie-reference-philosophie">
+(function () {
+
+    function harmoniser() {
+        const lien = document.querySelector(
+            "#galerie .gallery-top > a.text-link"
+        );
+
+        if (!lien) return;
+
+        if (!window.matchMedia("(max-width: 780px)").matches) {
+            lien.style.marginTop = "";
+            return;
+        }
+
+        const traitReference = document.querySelector(
+            "#salon .feature-copy > .rule"
+        );
+
+        const texteReference = document.querySelector(
+            "#salon .feature-copy > .rule + p"
+        );
+
+        const traitGalerie = document.querySelector(
+            "#galerie .gallery-top .rule"
+        );
+
+        if (!traitReference || !texteReference || !traitGalerie) return;
+
+        const distanceReference =
+            texteReference.getBoundingClientRect().top -
+            traitReference.getBoundingClientRect().bottom;
+
+        lien.style.marginTop = "0px";
+
+        const distanceActuelle =
+            lien.getBoundingClientRect().top -
+            traitGalerie.getBoundingClientRect().bottom;
+
+        const marge = Math.max(
+            0,
+            distanceReference - distanceActuelle
+        );
+
+        lien.style.marginTop = marge + "px";
+    }
+
+    window.addEventListener("load", harmoniser);
+    window.addEventListener("resize", harmoniser);
+
+})();
+</script>
+
+
+<script id="correction-espacement-texte-apropos-mobile">
+(function () {
+    function aligner() {
+        const traitRef = document.querySelector("#salon .feature-copy > .rule");
+        const texteRef = document.querySelector("#salon .feature-copy > .rule + p");
+        const trait = document.querySelector("#apropos .rule");
+        const texte = document.querySelector("#apropos .rule + p");
+
+        if (!traitRef || !texteRef || !trait || !texte) return;
+
+        texte.style.transform = "";
+
+        if (!window.matchMedia("(max-width: 780px)").matches) return;
+
+        const reference =
+            texteRef.getBoundingClientRect().top -
+            traitRef.getBoundingClientRect().bottom;
+
+        const actuelle =
+            texte.getBoundingClientRect().top -
+            trait.getBoundingClientRect().bottom;
+
+        const correction = reference - actuelle;
+
+        texte.style.transform = "translateY(" + correction + "px)";
+
+        console.log(
+            "A propos : reference =", reference,
+            "distance initiale =", actuelle,
+            "correction =", correction
+        );
+    }
+
+    window.addEventListener("load", aligner);
+    window.addEventListener("resize", aligner);
+})();
+</script>
+
+
+<script id="alignement-texte-accueil-reference-philosophie">
+(function () {
+    function harmoniser() {
+        const traitReference = document.querySelector(
+            "#salon .feature-copy > .rule"
+        );
+        const texteReference = document.querySelector(
+            "#salon .feature-copy > .rule + p"
+        );
+
+        const traitAccueil = document.querySelector(
+            "#accueil .hero-inner > .rule"
+        );
+        const texteAccueil = document.querySelector(
+            "#accueil .hero-inner > .rule + p"
+        );
+
+        if (!traitReference || !texteReference ||
+            !traitAccueil || !texteAccueil) return;
+
+        texteAccueil.style.marginTop = "";
+
+        if (!window.matchMedia("(max-width: 780px)").matches) return;
+
+        const distanceReference =
+            texteReference.getBoundingClientRect().top -
+            traitReference.getBoundingClientRect().bottom;
+
+        const distanceActuelle =
+            texteAccueil.getBoundingClientRect().top -
+            traitAccueil.getBoundingClientRect().bottom;
+
+        const margeActuelle =
+            parseFloat(getComputedStyle(texteAccueil).marginTop) || 0;
+
+        const correction = distanceReference - distanceActuelle;
+
+        texteAccueil.style.marginTop =
+            (margeActuelle + correction) + "px";
+
+        console.log(
+            "Accueil : espacement de reference =",
+            distanceReference,
+            "px"
+        );
+    }
+
+    window.addEventListener("load", harmoniser);
+    window.addEventListener("resize", harmoniser);
+})();
+</script>
+
 </body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
