@@ -1016,6 +1016,237 @@ h6 {
     stroke: #D39162 !important;
 }
 </style>
+<style id="accueil-plein-ecran">
+/* Accueil : hauteur de l'ecran moins le menu */
+.hero {
+    min-height: calc(100vh - 84px) !important;
+    min-height: calc(100dvh - 84px) !important;
+    display: flex !important;
+    align-items: center !important;
+    background-size: cover !important;
+}
+
+/* Adapter la hauteur sur telephone */
+@media (max-width: 780px) {
+    .hero {
+        min-height: calc(100vh - 72px) !important;
+        min-height: calc(100dvh - 72px) !important;
+    }
+}
+</style>
+<style id="correction-hauteur-accueil">
+/* Accueil : hauteur exacte sous le menu */
+.hero {
+    height: calc(100vh - 84px) !important;
+    height: calc(100dvh - 84px) !important;
+    min-height: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Conserver les textes dans la zone visible */
+.hero .hero-inner {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+/* Adaptation mobile */
+@media (max-width: 780px) {
+    .hero {
+        height: calc(100vh - 72px) !important;
+        height: calc(100dvh - 72px) !important;
+    }
+}
+</style>
+<style id="fondu-titre-prestations">
+
+/* Les trois textes partagent le meme fondu */
+
+#prestations .prestations-intro {
+    --duree-fondu-prestations: 4.5s;
+}
+
+/* Etat initial : textes transparents */
+#prestations .prestations-intro .prestations-surtitle,
+#prestations .prestations-intro h2,
+#prestations .prestations-intro p {
+    opacity: 0;
+}
+
+/* Fondu simultane */
+#prestations .prestations-intro.fondu-actif .prestations-surtitle,
+#prestations .prestations-intro.fondu-actif h2,
+#prestations .prestations-intro.fondu-actif p {
+    animation: fondu-prestations-complet
+        var(--duree-fondu-prestations, 4.5s)
+        ease-out both !important;
+}
+
+@keyframes fondu-prestations-complet {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Accessibilite */
+@media (prefers-reduced-motion: reduce) {
+    #prestations .prestations-intro .prestations-surtitle,
+    #prestations .prestations-intro h2,
+    #prestations .prestations-intro p {
+        opacity: 1 !important;
+        animation: none !important;
+    }
+}
+
+</style>
+<style id="fondu-complet-accueil">
+
+/* Fondu de 5 secondes uniquement sur les trois textes de la photo */
+
+#accueil .hero-inner > .eyebrow,
+#accueil .hero-inner > h1,
+#accueil .hero-inner > h2 {
+    opacity: 0;
+}
+
+/* Apparition simultanee, sans mouvement */
+#accueil .hero-inner.fondu-accueil-actif > .eyebrow,
+#accueil .hero-inner.fondu-accueil-actif > h1,
+#accueil .hero-inner.fondu-accueil-actif > h2 {
+    animation: ad-fondu-accueil 4.5s ease-out both !important;
+}
+
+@keyframes ad-fondu-accueil {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Accessibilite */
+@media (prefers-reduced-motion: reduce) {
+    #accueil .hero-inner > .eyebrow,
+    #accueil .hero-inner > h1,
+    #accueil .hero-inner > h2 {
+        opacity: 1 !important;
+        animation: none !important;
+    }
+}
+
+</style>
+<style id="fondu-philosophie">
+
+/* MA SIGNATURE + Ma philosophie : fondu simultane */
+
+#salon .feature-copy > .eyebrow,
+#salon .feature-copy > h2 {
+    opacity: 0;
+}
+
+/* Apparition en fondu de 4,5 secondes */
+#salon .feature-copy.fondu-philosophie-actif > .eyebrow,
+#salon .feature-copy.fondu-philosophie-actif > h2 {
+    animation: ad-fondu-philosophie 4.5s ease-out both !important;
+}
+
+@keyframes ad-fondu-philosophie {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Accessibilite */
+@media (prefers-reduced-motion: reduce) {
+    #salon .feature-copy > .eyebrow,
+    #salon .feature-copy > h2 {
+        opacity: 1 !important;
+        animation: none !important;
+    }
+}
+
+</style>
+<style id="fondu-galerie">
+
+/* Fondu simultane des deux textes de la galerie */
+
+#galerie .galerie-surtitle,
+#galerie .gallery-surtitle,
+#galerie .eyebrow,
+#galerie h2 {
+    opacity: 0;
+}
+
+#galerie.fondu-galerie-actif .galerie-surtitle,
+#galerie.fondu-galerie-actif .gallery-surtitle,
+#galerie.fondu-galerie-actif .eyebrow,
+#galerie.fondu-galerie-actif h2 {
+    animation: ad-fondu-galerie 4.5s ease-out both !important;
+}
+
+@keyframes ad-fondu-galerie {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #galerie .galerie-surtitle,
+    #galerie .gallery-surtitle,
+    #galerie .eyebrow,
+    #galerie h2 {
+        opacity: 1 !important;
+        animation: none !important;
+    }
+}
+
+</style>
+<style id="fondu-apropos">
+
+/* Fondu simultane des deux titres de la section A propos */
+
+#apropos .eyebrow,
+#apropos h2 {
+    opacity: 0;
+}
+
+#apropos.fondu-apropos-actif .eyebrow,
+#apropos.fondu-apropos-actif h2 {
+    animation: ad-fondu-apropos 4.5s ease-out both !important;
+}
+
+@keyframes ad-fondu-apropos {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #apropos .eyebrow,
+    #apropos h2 {
+        opacity: 1 !important;
+        animation: none !important;
+    }
+}
+
+</style>
 </head>
 <body>
 <header class="header"><nav class="nav container" aria-label="Navigation principale"><a class="brand brand-premium" href="#accueil"><span class="premium-logo-circle"><span class="monogram">AD</span></span><span class="premium-brand-text"><strong>BEAUTY ARTIST</strong><small><span>COIFFURE FÉMININE</span></small></span></a><button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button><div class="links" id="navigation"><a href="#accueil"><span class="premium-icon" aria-hidden="true"><svg class="premium-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7"/><path d="M5 9v12h14V9"/><path d="M9 21v-8h6v8"/></svg></span><span class="premium-label">Accueil</span></a><a href="#prestations"><span class="premium-icon" aria-hidden="true"><svg class="premium-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2Z"/><path d="m19 2 .7 2.3L22 5l-2.3.7L19 8l-.7-2.3L16 5l2.3-.7L19 2Z"/></svg></span><span class="premium-label">Prestations et tarifs</span></a>
@@ -1097,7 +1328,677 @@ const toggle=document.querySelector('.menu-toggle'),links=document.querySelector
 // Remplacer la valeur vide par l'URL officielle de la fiche Planity du salon.
 const PLANITY_URL='';document.getElementById('planity').addEventListener('click',e=>{if(PLANITY_URL){e.currentTarget.href=PLANITY_URL;return}e.preventDefault();const n=document.getElementById('notice');n.classList.add('show');setTimeout(()=>n.classList.remove('show'),4000)});
 </script>
+<!-- TEST TEMPORAIRE : 4 FLECHES D'ACCUEIL -->
+<div id="test-fleches-accueil">
+
+    <a id="fleche-accueil-test" class="modele-2" href="#prestations"
+       aria-label="Decouvrir les prestations">
+        <span class="fleche-texte">DÉCOUVRIR</span>
+        <span class="fleche-symbole">↓</span>
+    </a>
+
+    
+
+</div>
+
+<style id="styles-test-fleches">
+
+#test-fleches-accueil {
+    --cuivre: #D39162;
+}
+
+#fleche-accueil-test {
+    position: fixed;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 25;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    color: var(--cuivre);
+    text-decoration: none;
+    font-family: Montserrat, Arial, sans-serif;
+    transition: opacity .3s ease;
+}
+
+#fleche-accueil-test .fleche-texte {
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+#fleche-accueil-test .fleche-symbole {
+    font-size: 29px;
+    line-height: 1;
+}
+
+/* MODELE 1 : MINIMALISTE */
+
+#fleche-accueil-test.modele-1 .fleche-texte {
+    display: none;
+}
+
+#fleche-accueil-test.modele-1 .fleche-symbole {
+    animation: mouvement-fleche 2s infinite;
+}
+
+/* MODELE 2 : SIGNATURE */
+
+#fleche-accueil-test.modele-2 .fleche-symbole {
+    animation: mouvement-fleche 2s infinite;
+}
+
+/* MODELE 3 : CERCLE PREMIUM */
+
+#fleche-accueil-test.modele-3 .fleche-texte {
+    display: none;
+}
+
+#fleche-accueil-test.modele-3 .fleche-symbole {
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--cuivre);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: box-shadow .3s ease;
+}
+
+#fleche-accueil-test.modele-3:hover .fleche-symbole {
+    box-shadow: 0 0 16px rgba(211,145,98,.5);
+}
+
+/* MODELE 4 : ELEGANCE */
+
+#fleche-accueil-test.modele-4 .fleche-texte {
+    display: none;
+}
+
+#fleche-accueil-test.modele-4::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 38px;
+    background: var(--cuivre);
+    animation: mouvement-fleche 2.5s infinite;
+}
+
+#fleche-accueil-test.modele-4 .fleche-symbole {
+    font-size: 22px;
+}
+
+/* ANIMATION */
+
+@keyframes mouvement-fleche {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(7px);
+    }
+}
+
+/* SELECTEUR TEMPORAIRE */
+
+.selecteur-fleches {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 30;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    background: rgba(12,12,12,.94);
+    border: 1px solid #654631;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.selecteur-fleches span {
+    color: #ddd;
+    font: 10px Montserrat, Arial, sans-serif;
+    margin-right: 5px;
+}
+
+.selecteur-fleches button {
+    width: 30px;
+    height: 30px;
+    background: #222;
+    border: 1px solid #654631;
+    border-radius: 5px;
+    color: #D39162;
+    cursor: pointer;
+}
+
+.selecteur-fleches button.actif {
+    background: #D39162;
+    color: #111;
+}
+
+@media (max-width: 780px) {
+    .selecteur-fleches {
+        right: 8px;
+        bottom: 8px;
+        padding: 6px;
+        gap: 4px;
+    }
+
+    .selecteur-fleches span {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #test-fleches-accueil *,
+    #test-fleches-accueil::before {
+        animation: none !important;
+    }
+}
+
+</style>
+
+<script id="script-test-fleches">
+(function () {
+    const fleche = document.getElementById("fleche-accueil-test");
+    const accueil = document.querySelector(".hero");
+
+    if (!fleche || !accueil) return;
+
+    function verifierPosition() {
+        const basAccueil = accueil.getBoundingClientRect().bottom;
+        const visible = basAccueil > window.innerHeight * 0.4;
+
+        fleche.style.opacity = visible ? "1" : "0";
+        fleche.style.pointerEvents = visible ? "auto" : "none";
+    }
+
+    window.addEventListener("scroll", verifierPosition, {
+        passive: true
+    });
+
+    window.addEventListener("resize", verifierPosition);
+
+    verifierPosition();
+
+    fleche.addEventListener("click", function (evenement) {
+        const cible =
+            document.getElementById("prestations") ||
+            document.querySelector(".services") ||
+            document.querySelector(".prestations-intro");
+
+        if (!cible) return;
+
+        evenement.preventDefault();
+
+        cible.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    });
+})();
+</script>
+
+
+
+<script id="script-fondu-titre-prestations">
+(function () {
+    const bloc = document.querySelector(
+        "#prestations .prestations-intro"
+    );
+
+    if (!bloc) return;
+
+    if (window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches) return;
+
+    const titre = bloc.querySelector("h2");
+
+    if (titre) {
+        titre.classList.remove(
+            "fondu-en-attente",
+            "fondu-en-cours"
+        );
+
+        titre.style.removeProperty("opacity");
+    }
+
+    let animationLancee = false;
+
+    function lancerFondu() {
+        if (animationLancee) return;
+
+        animationLancee = true;
+
+        bloc.classList.remove("fondu-actif");
+
+        void bloc.offsetWidth;
+
+        bloc.classList.add("fondu-actif");
+    }
+
+    function reinitialiserFondu() {
+        if (!animationLancee) return;
+
+        animationLancee = false;
+
+        bloc.classList.remove("fondu-actif");
+    }
+
+    if (!("IntersectionObserver" in window)) {
+        lancerFondu();
+        return;
+    }
+
+    const observateur = new IntersectionObserver(
+        function (entrees) {
+            entrees.forEach(function (entree) {
+
+                /*
+                 * Bloc entierement visible :
+                 * demarrer le fondu.
+                 */
+                if (entree.intersectionRatio >= 0.99) {
+                    lancerFondu();
+                }
+
+                /*
+                 * Bloc entierement hors ecran :
+                 * remettre les textes a zero.
+                 */
+                else if (!entree.isIntersecting) {
+                    reinitialiserFondu();
+                }
+            });
+        },
+        {
+            threshold: [0, 0.99, 1]
+        }
+    );
+
+    observateur.observe(bloc);
+})();
+</script>
+<script id="disparition-immediate-decouvrir">
+(function () {
+    const bouton = document.getElementById("fleche-accueil-test");
+
+    if (!bouton) return;
+
+    function verifierDefilement() {
+        const toutEnHaut = window.scrollY < 1;
+
+        bouton.style.setProperty(
+            "opacity",
+            toutEnHaut ? "1" : "0",
+            "important"
+        );
+
+        bouton.style.setProperty(
+            "pointer-events",
+            toutEnHaut ? "auto" : "none",
+            "important"
+        );
+
+        bouton.style.setProperty(
+            "visibility",
+            toutEnHaut ? "visible" : "hidden",
+            "important"
+        );
+    }
+
+    window.addEventListener("scroll", verifierDefilement, {
+        passive: true
+    });
+
+    window.addEventListener("resize", verifierDefilement);
+
+    verifierDefilement();
+})();
+</script>
+
+<output class="reglage-valeur" id="valeur-duree-fondu">1,2 s</output>
+
+    <input
+        type="range"
+        id="curseur-duree-fondu"
+        min="0.3"
+        max="3"
+        step="0.1"
+        value="1.2"
+        aria-label="Durée du fondu des prestations"
+    >
+
+    <button type="button" id="tester-duree-fondu">
+        TESTER LE FONDU
+    </button>
+</div>
+
+
+<script id="script-fondu-complet-accueil">
+(function () {
+    const accueil = document.getElementById("accueil");
+
+    if (!accueil) return;
+
+    const bloc = accueil.querySelector(".hero-inner");
+
+    if (!bloc) return;
+
+    if (window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches) return;
+
+    let animationLancee = false;
+
+    function lancerFondu() {
+        if (animationLancee) return;
+
+        animationLancee = true;
+
+        bloc.classList.remove("fondu-accueil-actif");
+
+        void bloc.offsetWidth;
+
+        bloc.classList.add("fondu-accueil-actif");
+    }
+
+    function reinitialiserFondu() {
+        if (!animationLancee) return;
+
+        animationLancee = false;
+
+        bloc.classList.remove("fondu-accueil-actif");
+    }
+
+    if (!("IntersectionObserver" in window)) {
+        lancerFondu();
+        return;
+    }
+
+    const observateur = new IntersectionObserver(
+        function (entrees) {
+            entrees.forEach(function (entree) {
+
+                /*
+                 * Accueil visible :
+                 * lancer le fondu.
+                 */
+                if (entree.intersectionRatio >= 0.99) {
+                    lancerFondu();
+                }
+
+                /*
+                 * Accueil completement hors ecran :
+                 * reinitialiser le fondu.
+                 */
+                else if (!entree.isIntersecting) {
+                    reinitialiserFondu();
+                }
+            });
+        },
+        {
+            threshold: [0, 0.99, 1]
+        }
+    );
+
+    observateur.observe(accueil);
+})();
+</script>
+<script id="script-fondu-philosophie">
+(function () {
+    const section = document.getElementById("salon");
+
+    if (!section) return;
+
+    const bloc = section.querySelector(".feature-copy");
+    const surtitre = bloc && bloc.querySelector(".eyebrow");
+    const titre = bloc && bloc.querySelector("h2");
+
+    if (!bloc || !surtitre || !titre) return;
+
+    if (window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches) return;
+
+    let animationLancee = false;
+
+    function lancerFondu() {
+        if (animationLancee) return;
+
+        animationLancee = true;
+
+        bloc.classList.remove("fondu-philosophie-actif");
+
+        void bloc.offsetWidth;
+
+        bloc.classList.add("fondu-philosophie-actif");
+    }
+
+    function reinitialiserFondu() {
+        if (!animationLancee) return;
+
+        animationLancee = false;
+        bloc.classList.remove("fondu-philosophie-actif");
+    }
+
+    if (!("IntersectionObserver" in window)) {
+        lancerFondu();
+        return;
+    }
+
+    /*
+     * On observe uniquement la zone contenant
+     * MA SIGNATURE et Ma philosophie.
+     * Cela evite d'attendre que tous les paragraphes
+     * soient visibles.
+     */
+    const observateur = new IntersectionObserver(
+        function (entrees) {
+            entrees.forEach(function (entree) {
+                const rectSurtitre = surtitre.getBoundingClientRect();
+                const rectTitre = titre.getBoundingClientRect();
+
+                const tousVisibles =
+                    rectSurtitre.top >= 0 &&
+                    rectTitre.bottom <= window.innerHeight;
+
+                if (tousVisibles) {
+                    lancerFondu();
+                } else if (!entree.isIntersecting) {
+                    reinitialiserFondu();
+                }
+            });
+        },
+        {
+            threshold: [0, 0.1, 0.5, 1]
+        }
+    );
+
+    /*
+     * Observation du titre : declenchement lorsque
+     * les deux textes sont visibles.
+     */
+    observateur.observe(titre);
+
+    /*
+     * Verification complementaire lors du defilement,
+     * pour gerer les differents formats d'ecran.
+     */
+    function verifierPosition() {
+        const rectSurtitre = surtitre.getBoundingClientRect();
+        const rectTitre = titre.getBoundingClientRect();
+
+        const tousVisibles =
+            rectSurtitre.top >= 0 &&
+            rectTitre.bottom <= window.innerHeight;
+
+        const completementSortis =
+            rectTitre.bottom <= 0 ||
+            rectSurtitre.top >= window.innerHeight;
+
+        if (tousVisibles) {
+            lancerFondu();
+        } else if (completementSortis) {
+            reinitialiserFondu();
+        }
+    }
+
+    window.addEventListener("scroll", verifierPosition, {
+        passive: true
+    });
+
+    window.addEventListener("resize", verifierPosition);
+
+    verifierPosition();
+})();
+</script>
+<script id="script-fondu-galerie">
+(function () {
+    const section = document.getElementById("galerie");
+
+    if (!section) return;
+
+    const titre = section.querySelector("h2");
+
+    const surtitre = section.querySelector(
+        ".galerie-surtitle, .gallery-surtitle, .eyebrow"
+    );
+
+    if (!titre || !surtitre) return;
+
+    if (window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches) return;
+
+    let animationLancee = false;
+
+    function verifierPosition() {
+        const rectSurtitre = surtitre.getBoundingClientRect();
+        const rectTitre = titre.getBoundingClientRect();
+
+        const tousVisibles =
+            rectSurtitre.top >= 0 &&
+            rectTitre.bottom <= window.innerHeight;
+
+        const completementSortis =
+            rectTitre.bottom <= 0 ||
+            rectSurtitre.top >= window.innerHeight;
+
+        if (tousVisibles && !animationLancee) {
+            animationLancee = true;
+
+            section.classList.remove("fondu-galerie-actif");
+
+            void section.offsetWidth;
+
+            section.classList.add("fondu-galerie-actif");
+        }
+
+        if (completementSortis && animationLancee) {
+            animationLancee = false;
+            section.classList.remove("fondu-galerie-actif");
+        }
+    }
+
+    window.addEventListener("scroll", verifierPosition, {
+        passive: true
+    });
+
+    window.addEventListener("resize", verifierPosition);
+
+    verifierPosition();
+})();
+</script>
+<script id="script-fondu-apropos">
+(function () {
+    const section = document.getElementById("apropos");
+
+    if (!section) return;
+
+    const titre = section.querySelector("h2");
+
+    const surtitre = section.querySelector(
+        ".eyebrow, .about-surtitle, .apropos-surtitle"
+    );
+
+    if (!titre || !surtitre) return;
+
+    if (window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches) return;
+
+    let animationLancee = false;
+
+    function verifierPosition() {
+        const rectSurtitre = surtitre.getBoundingClientRect();
+        const rectTitre = titre.getBoundingClientRect();
+
+        const tousVisibles =
+            rectSurtitre.top >= 0 &&
+            rectTitre.bottom <= window.innerHeight;
+
+        const completementSortis =
+            rectTitre.bottom <= 0 ||
+            rectSurtitre.top >= window.innerHeight;
+
+        if (tousVisibles && !animationLancee) {
+            animationLancee = true;
+
+            section.classList.remove("fondu-apropos-actif");
+
+            void section.offsetWidth;
+
+            section.classList.add("fondu-apropos-actif");
+        }
+
+        if (completementSortis && animationLancee) {
+            animationLancee = false;
+            section.classList.remove("fondu-apropos-actif");
+        }
+    }
+
+    window.addEventListener("scroll", verifierPosition, {
+        passive: true
+    });
+
+    window.addEventListener("resize", verifierPosition);
+
+    verifierPosition();
+})();
+</script>
 </body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
