@@ -1266,6 +1266,94 @@ h6 {
 }
 </style>
 
+
+<style id="style-kits-icones">
+/* Comparateur provisoire des kits d'icones */
+
+.ad-kit-icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 16px;
+    color: #D39162;
+}
+
+.ad-kit-icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#prestations .ad-kit-icon,
+#galerie .ad-kit-icon {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 780px) {
+    .ad-kit-icon {
+        width: 27px;
+        height: 27px;
+        margin-bottom: 12px;
+    }
+}
+</style>
+
+
+<style id="animation-icones-kit-1">
+
+/* Icones : invisibles avant l'apparition du titre */
+#prestations .ad-kit-icon,
+#salon .ad-kit-icon,
+#galerie .ad-kit-icon,
+#apropos .ad-kit-icon {
+    opacity: 0;
+}
+
+/* Meme fondu de 4,5 secondes que les titres */
+#prestations .prestations-intro.fondu-actif .ad-kit-icon,
+#salon .feature-copy.fondu-philosophie-actif .ad-kit-icon,
+#galerie.fondu-galerie-actif .ad-kit-icon,
+#apropos.fondu-apropos-actif .ad-kit-icon {
+    animation: apparition-icone-kit-1 4.5s ease-out both;
+}
+
+@keyframes apparition-icone-kit-1 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+</style>
+
+
+<style id="alignement-icone-galerie">
+/* Aligner l'icone de la galerie avec MES REALISATIONS */
+#galerie .ad-kit-icon {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+</style>
+
+
+<style id="centrage-calendrier-contact">
+/* Centrer le calendrier au-dessus des informations de contact */
+#contact > .ad-kit-icon {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 20px;
+}
+</style>
+
 </head>
 <body>
 <header class="header"><nav class="nav container" aria-label="Navigation principale"><a class="brand brand-premium" href="#accueil"><span class="premium-logo-circle"><span class="monogram">AD</span></span><span class="premium-brand-text"><strong>BEAUTY ARTIST</strong><small><span>COIFFURE FÉMININE</span></small></span></a><button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button><div class="links" id="navigation"><a href="#accueil"><span class="premium-icon" aria-hidden="true"><svg class="premium-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7"/><path d="M5 9v12h14V9"/><path d="M9 21v-8h6v8"/></svg></span><span class="premium-label">Accueil</span></a><a href="#prestations"><span class="premium-icon" aria-hidden="true"><svg class="premium-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2Z"/><path d="m19 2 .7 2.3L22 5l-2.3.7L19 8l-.7-2.3L16 5l2.3-.7L19 2Z"/></svg></span><span class="premium-label">Prestations et tarifs</span></a>
@@ -2026,7 +2114,112 @@ const PLANITY_URL='';document.getElementById('planity').addEventListener('click'
 })();
 </script>
 
+
+<script id="script-kits-icones">
+(function () {
+    const cuivre = "#D39162";
+
+    const dessins = {
+        elegance: [
+            '<path d="M5 5L19 19M19 5L5 19"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/>',
+            '<path d="M12 3L14.5 9.5L21 12L14.5 14.5L12 21L9.5 14.5L3 12L9.5 9.5Z"/>',
+            '<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M3 17L9 12L13 15L17 10L21 14"/>',
+            '<path d="M12 21S3 15.5 3 9.5A5 5 0 0 1 12 6A5 5 0 0 1 21 9.5C21 15.5 12 21 12 21Z"/>',
+            '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3V7M17 3V7M3 10H21M8 14H10M14 14H16M8 18H10M14 18H16"/>'
+        ],
+        prestige: [
+            '<path d="M3 8L7 4L12 8L17 4L21 8L18 20H6Z"/><path d="M3 8H21M6 15H18"/>',
+            '<path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9Z"/><circle cx="12" cy="12" r="2"/>',
+            '<path d="M12 2L20 8V17L12 22L4 17V8Z"/><path d="M4 8L12 13L20 8M12 13V22"/>',
+            '<path d="M12 21L4 13A6 6 0 0 1 12 5A6 6 0 0 1 20 13Z"/><path d="M12 8V17M8 12H16"/>',
+            '<circle cx="12" cy="12" r="9"/><path d="M12 3V21M3 12H21M6 6L18 18M18 6L6 18"/>'
+        ],
+        minimaliste: [
+            '<circle cx="12" cy="12" r="8"/><path d="M8 12H16M12 8V16"/>',
+            '<path d="M12 3L21 12L12 21L3 12Z"/>',
+            '<rect x="4" y="4" width="16" height="16" rx="1"/><path d="M8 16L16 8M10 8H16V14"/>',
+            '<path d="M12 3L21 21H3Z"/>',
+            '<path d="M5 12H19M13 6L19 12L13 18"/>'
+        ],
+        artistique: [
+            '<path d="M12 12C3 3 3 18 12 12C21 3 21 18 12 12Z"/><path d="M12 12L17 21"/>',
+            '<circle cx="12" cy="12" r="4"/><path d="M12 2V6M12 18V22M2 12H6M18 12H22M5 5L8 8M16 16L19 19M19 5L16 8M8 16L5 19"/>',
+            '<path d="M4 18Q7 5 20 6Q18 19 4 18Z"/><path d="M4 18L17 9"/>',
+            '<path d="M12 20C4 16 2 10 6 6C9 3 12 6 12 8C12 6 15 3 18 6C22 10 20 16 12 20Z"/>',
+            '<path d="M12 2Q20 8 12 12Q4 16 12 22M4 8Q12 4 20 8M4 16Q12 20 20 16"/>'
+        ]
+    };
+
+    const sections = [
+        {
+            selecteur: "#prestations .prestations-intro",
+            position: "premier"
+        },
+        {
+            selecteur: "#salon .feature-copy",
+            position: "premier"
+        },
+        {
+            selecteur: "#galerie .gallery-top > div",
+            position: "premier"
+        },
+        {
+            selecteur: "#apropos .container > div",
+            position: "premier"
+        },
+        {
+            selecteur: "#contact",
+            position: "premier"
+        }
+    ];
+
+    const emplacements = [];
+
+    sections.forEach(function (section) {
+        const cible = document.querySelector(section.selecteur);
+
+        if (!cible) return;
+
+        const icone = document.createElement("span");
+        icone.className = "ad-kit-icon";
+        icone.setAttribute("aria-hidden", "true");
+
+        cible.insertBefore(icone, cible.firstChild);
+        emplacements.push(icone);
+    });
+
+    function appliquerKit(nom) {
+        const kit = dessins[nom];
+
+        if (!kit) return;
+
+        emplacements.forEach(function (icone, index) {
+            icone.innerHTML =
+                '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">' +
+                kit[index % kit.length] +
+                '</svg>';
+        });
+
+        document.querySelectorAll(
+            "#comparateur-kits-icones [data-kit]"
+        ).forEach(function (bouton) {
+            bouton.classList.toggle(
+                "actif",
+                bouton.dataset.kit === nom
+            );
+        });
+    }
+    appliquerKit("elegance");
+})();
+</script>
+
 </body></html>
+
+
+
+
+
+
 
 
 
