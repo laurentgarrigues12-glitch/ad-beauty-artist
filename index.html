@@ -1523,6 +1523,274 @@ h6 {
     }
 }
 </style>
+
+<style id="reorganisation-philosophie-mobile">
+@media (max-width: 780px) {
+
+    #salon {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+
+    #salon .feature-copy {
+        display: contents !important;
+    }
+
+    #salon .feature-copy > .ad-kit-icon,
+    #salon .feature-copy > .eyebrow,
+    #salon .feature-copy > h2,
+    #salon .feature-copy > .rule {
+        grid-column: 1;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+
+    #salon .feature-copy > .ad-kit-icon {
+        order: 1;
+        margin-top: 45px !important;
+    }
+
+    #salon .feature-copy > .eyebrow {
+        order: 2;
+    }
+
+    #salon .feature-copy > h2 {
+        order: 3;
+    }
+
+    #salon .feature-copy > .rule {
+        order: 4;
+    }
+
+    #salon .feature-image {
+        order: 5;
+        grid-column: 1;
+        width: 100%;
+    }
+
+    #salon .feature-copy > p,
+    #salon .feature-copy > .text-link {
+        grid-column: 1;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+
+    #salon .feature-copy > p {
+        order: 6;
+    }
+
+    #salon .feature-copy > .text-link {
+        order: 7;
+        margin-bottom: 45px;
+    }
+
+}
+</style>
+
+<style id="correction-ordre-philosophie-mobile">
+@media (max-width: 780px) {
+    #salon {
+        display: block !important;
+    }
+
+    #salon .feature-copy {
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 45px 0 45px !important;
+    }
+
+    #salon .feature-copy > .ad-kit-icon,
+    #salon .feature-copy > .eyebrow,
+    #salon .feature-copy > h2,
+    #salon .feature-copy > .rule,
+    #salon .feature-copy > p,
+    #salon .feature-copy > .text-link {
+        margin-left: 6% !important;
+        margin-right: 6% !important;
+    }
+
+    #salon .feature-copy > .ad-kit-icon {
+        margin-top: 0 !important;
+    }
+
+    #salon .feature-copy > .feature-image {
+        width: 100% !important;
+        margin: 24px 0 !important;
+        min-height: 280px;
+    }
+}
+</style>
+
+<style id="ordre-definitif-philosophie-mobile">
+@media (max-width: 780px) {
+
+    #salon {
+        display: block !important;
+    }
+
+    #salon .feature-copy {
+        display: flex !important;
+        flex-direction: column !important;
+        padding-top: 45px !important;
+    }
+
+    #salon .feature-copy > .ad-kit-icon {
+        order: 1 !important;
+        margin-top: 0 !important;
+    }
+
+    #salon .feature-copy > .eyebrow {
+        order: 2 !important;
+    }
+
+    #salon .feature-copy > h2 {
+        order: 3 !important;
+    }
+
+    #salon .feature-copy > .rule {
+        order: 4 !important;
+    }
+
+    #salon .feature-copy > .feature-image {
+        order: 5 !important;
+        width: 100% !important;
+        margin-top: 24px !important;
+        margin-bottom: 24px !important;
+    }
+
+    #salon .feature-copy > p {
+        order: 6 !important;
+    }
+
+    #salon .feature-copy > .text-link {
+        order: 7 !important;
+    }
+}
+</style>
+
+<style id="restauration-photo-philosophie-ordinateur">
+@media (min-width: 781px) {
+
+    #salon {
+        display: block !important;
+    }
+
+    #salon .feature-copy {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: repeat(4, auto) 1fr;
+        column-gap: 0;
+        padding: 0 !important;
+        align-items: start;
+    }
+
+    #salon .feature-copy > .feature-image {
+        grid-column: 1;
+        grid-row: 1 / -1;
+        width: 100%;
+        height: 100%;
+        min-height: 500px;
+    }
+
+    #salon .feature-copy > :not(.feature-image) {
+        grid-column: 2;
+        margin-left: 12% !important;
+        margin-right: 12% !important;
+    }
+}
+</style>
+
+<style id="correction-photo-pleine-hauteur-ordinateur">
+@media (min-width: 781px) {
+
+    #salon .feature-copy {
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        padding: 65px 6% 65px calc(50% + 6%) !important;
+        min-height: 650px !important;
+    }
+
+    #salon .feature-copy > .feature-image {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 50% !important;
+        height: 100% !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+    }
+
+    #salon .feature-copy > :not(.feature-image) {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+</style>
+
+<style id="espacement-trait-photo-philosophie-22px-mobile">
+@media (max-width: 780px) {
+    #salon .feature-copy > .feature-image {
+        margin-top: 22px !important;
+    }
+}
+</style>
+
+<style id="correction-ecart-trait-photo-22px-mobile">
+@media (max-width: 780px) {
+    #salon .feature-copy > .rule {
+        margin-bottom: 0 !important;
+    }
+
+    #salon .feature-copy > .feature-image {
+        margin-top: 22px !important;
+    }
+}
+</style>
+
+<style id="ajustement-visuel-photo-philosophie-27px-mobile">
+@media (max-width: 780px) {
+    #salon .feature-copy > .feature-image {
+        margin-top: 27px !important;
+    }
+}
+</style>
+
+<style id="ajustement-ecart-cartes-45px-mobile">
+@media (max-width: 780px) {
+    #prestations .prestations-grid {
+        top: -18px !important;
+    }
+}
+</style>
+
+<style id="correction-icone-apropos-45px-mobile">
+@media (max-width: 780px) {
+    #apropos .ad-kit-icon {
+        position: relative;
+        top: -1px;
+    }
+}
+</style>
+
+<style id="correction-calendrier-45px-mobile">
+@media (max-width: 780px) {
+    #contact .ad-kit-icon {
+        position: relative;
+        top: 4px;
+    }
+}
+</style>
+
+<style id="centrage-vertical-rdv-accueil-mobile">
+@media (max-width: 780px) {
+    #accueil .cta {
+        position: relative;
+        top: 17.94px;
+    }
+}
+</style>
 </head>
 <body>
 <header class="header"><nav class="nav container" aria-label="Navigation principale"><a class="brand brand-premium" href="#accueil"><span class="premium-logo-circle"><span class="monogram">AD</span></span><span class="premium-brand-text"><strong>BEAUTY ARTIST</strong><small><span>COIFFURE FÉMININE</span></small></span></a><button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button><div class="links" id="navigation"><a href="#accueil"><span class="premium-icon" aria-hidden="true"><svg class="premium-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7"/><path d="M5 9v12h14V9"/><path d="M9 21v-8h6v8"/></svg></span><span class="premium-label">Accueil</span></a><a href="#prestations"><span class="premium-icon" aria-hidden="true"><svg class="premium-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2Z"/><path d="m19 2 .7 2.3L22 5l-2.3.7L19 8l-.7-2.3L16 5l2.3-.7L19 2Z"/></svg></span><span class="premium-label">Prestations et tarifs</span></a>
@@ -1582,7 +1850,7 @@ h6 {
 
   </div>
 </section>
-<section class="feature" id="salon"><div class="feature-image" role="img" aria-label="Photographie d'inspiration coiffure féminine"></div><div class="feature-copy"><div class="eyebrow">Mon salon</div><h2>Ma philosophie</h2><div class="rule"></div><p>Créer bien plus qu'un simple rendez-vous : une véritable parenthèse de raffinement et de bien-être.</p>
+<section class="feature" id="salon"><div class="feature-copy"><div class="eyebrow">Mon salon</div><h2>Ma philosophie</h2><div class="rule"></div><div class="feature-image" role="img" aria-label="Photographie d'inspiration coiffure féminine"></div><p>Créer bien plus qu'un simple rendez-vous : une véritable parenthèse de raffinement et de bien-être.</p>
 
 <p>Dans un cadre pensé pour allier élégance et sérénité, chaque prestation est conçue comme une expérience sur mesure, où l'écoute, l'expertise et le sens du détail sont au cœur de mon approche.</p>
 
@@ -2565,7 +2833,44 @@ const PLANITY_URL='';document.getElementById('planity').addEventListener('click'
 })();
 </script>
 
+
+<script id="espacement-galerie-lien-22px-mobile">
+(function () {
+    function ajuster() {
+        if (window.innerWidth > 780) return;
+
+        const trait = document.querySelector("#galerie .rule");
+        const lien = document.querySelector("#galerie .gallery-top .text-link");
+
+        if (!trait || !lien) return;
+
+        lien.style.marginTop = "0px";
+
+        const ecart =
+            lien.getBoundingClientRect().top -
+            trait.getBoundingClientRect().bottom;
+
+        lien.style.marginTop = (22 - ecart) + "px";
+    }
+
+    window.addEventListener("load", ajuster);
+    window.addEventListener("resize", ajuster);
+})();
+</script>
 </body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
